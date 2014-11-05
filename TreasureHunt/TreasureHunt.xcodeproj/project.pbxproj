@@ -27,6 +27,8 @@
 		8460CB261A095A5F0036BCB3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8460CB231A095A5F0036BCB3 /* Parse.framework */; };
 		8460CB271A095A5F0036BCB3 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8460CB241A095A5F0036BCB3 /* ParseFacebookUtils.framework */; };
 		849D9C561A0A5B3F007CFD38 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C551A0A5B3F007CFD38 /* LoginViewController.m */; };
+		849D9C591A0A69DF007CFD38 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C581A0A69DF007CFD38 /* RegisterViewController.m */; };
+		849D9C5C1A0A791E007CFD38 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C5B1A0A791E007CFD38 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,10 @@
 		8460CB241A095A5F0036BCB3 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "../../../../Downloads/parse-library-1.4.2/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
 		849D9C541A0A5B3F007CFD38 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		849D9C551A0A5B3F007CFD38 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		849D9C571A0A69DF007CFD38 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		849D9C581A0A69DF007CFD38 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		849D9C5A1A0A791E007CFD38 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		849D9C5B1A0A791E007CFD38 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,10 @@
 				8460CACA1A066AD10036BCB3 /* Supporting Files */,
 				849D9C541A0A5B3F007CFD38 /* LoginViewController.h */,
 				849D9C551A0A5B3F007CFD38 /* LoginViewController.m */,
+				849D9C571A0A69DF007CFD38 /* RegisterViewController.h */,
+				849D9C581A0A69DF007CFD38 /* RegisterViewController.m */,
+				849D9C5A1A0A791E007CFD38 /* HomeViewController.h */,
+				849D9C5B1A0A791E007CFD38 /* HomeViewController.m */,
 			);
 			path = TreasureHunt;
 			sourceTree = "<group>";
@@ -282,6 +292,8 @@
 				8460CAD01A066AD10036BCB3 /* AppDelegate.m in Sources */,
 				8460CACD1A066AD10036BCB3 /* main.m in Sources */,
 				849D9C561A0A5B3F007CFD38 /* LoginViewController.m in Sources */,
+				849D9C5C1A0A791E007CFD38 /* HomeViewController.m in Sources */,
+				849D9C591A0A69DF007CFD38 /* RegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
