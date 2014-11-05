@@ -8,8 +8,9 @@
 
 #import "LoginViewController.h"
 #import <Parse/Parse.h>
+#import "HomeViewController.h"
 
-@interface LoginViewController ()
+@interface LoginViewController () <PFLogInViewControllerDelegate>
 
 @end
 
@@ -17,7 +18,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //PFLogInViewController *login = [[PFLogInViewController alloc] init];
+    //login.delegate = self;
+    //[self presentViewController:login animated:YES completion:nil];
+    
     // Do any additional setup after loading the view.
+}
+
+-(void)login:(UIButton *)sender{
+    NSString *username = self.username.text;
+    NSString *pass = self.password.text;
+    [self loginUserWithName:username andPassword:pass];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,7 +41,8 @@
     [PFUser logInWithUsernameInBackground:username password:password
                                     block:^(PFUser *user, NSError *error){
         if(user){
-            //push home view controller
+            HomeViewController *homeController = [[HomeViewController alloc] init];
+            [self presentViewController:homeController animated:YES completion:nil];
         }
         else{
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login failed!" message:@"Incorrect username or password." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];

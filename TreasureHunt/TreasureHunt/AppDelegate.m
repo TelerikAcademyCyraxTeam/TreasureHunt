@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "HomeViewController.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +21,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Parse setApplicationId:@"LdDZ0p4n4EbVPNkU1Pc8I5VedgNepgsC4rlyRWBs"
                   clientKey:@"QWj1wZCFrY1P3eonq8ZpbXiMUggXei2jYCCWkz6U"];
+    PFUser *currentUser = [PFUser currentUser];
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    if(currentUser){
+        //push home view screen
+        UIViewController *home = [storyboard instantiateViewControllerWithIdentifier:@"home"];
+        self.window.rootViewController = home;
+    }
+    else{
+        //push login screen
+        UIViewController *login = [storyboard instantiateViewControllerWithIdentifier:@"login"];
+        self.window.rootViewController = login;
+    }
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
