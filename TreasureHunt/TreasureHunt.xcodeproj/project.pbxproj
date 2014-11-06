@@ -26,18 +26,15 @@
 		8460CB1D1A0954940036BCB3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8460CB1C1A0954940036BCB3 /* StoreKit.framework */; };
 		8460CB1F1A0954A10036BCB3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8460CB1E1A0954A10036BCB3 /* SystemConfiguration.framework */; };
 		8460CB211A0954B30036BCB3 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8460CB201A0954B30036BCB3 /* libz.1.1.3.dylib */; };
-<<<<<<< HEAD
-=======
+
 		8460CB251A095A5F0036BCB3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8460CB221A095A5F0036BCB3 /* Bolts.framework */; };
 		8460CB261A095A5F0036BCB3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8460CB231A095A5F0036BCB3 /* Parse.framework */; };
 		8460CB271A095A5F0036BCB3 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8460CB241A095A5F0036BCB3 /* ParseFacebookUtils.framework */; };
 		849D9C561A0A5B3F007CFD38 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C551A0A5B3F007CFD38 /* LoginViewController.m */; };
-<<<<<<< HEAD
+
 		849D9C591A0A69DF007CFD38 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C581A0A69DF007CFD38 /* RegisterViewController.m */; };
 		849D9C5C1A0A791E007CFD38 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C5B1A0A791E007CFD38 /* HomeViewController.m */; };
-=======
->>>>>>> d6087e850c5519b71c0c5f85841cba00d7ea8061
->>>>>>> 8400df8a60e4c36ea817937257958cdec7a03838
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,21 +72,18 @@
 		8460CB1C1A0954940036BCB3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8460CB1E1A0954A10036BCB3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8460CB201A0954B30036BCB3 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
-<<<<<<< HEAD
-=======
+
 		8460CB221A095A5F0036BCB3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../Downloads/parse-library-1.4.2/Bolts.framework"; sourceTree = "<group>"; };
 		8460CB231A095A5F0036BCB3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../../Downloads/parse-library-1.4.2/Parse.framework"; sourceTree = "<group>"; };
 		8460CB241A095A5F0036BCB3 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "../../../../Downloads/parse-library-1.4.2/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
 		849D9C541A0A5B3F007CFD38 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		849D9C551A0A5B3F007CFD38 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
+
 		849D9C571A0A69DF007CFD38 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		849D9C581A0A69DF007CFD38 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		849D9C5A1A0A791E007CFD38 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		849D9C5B1A0A791E007CFD38 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-=======
->>>>>>> d6087e850c5519b71c0c5f85841cba00d7ea8061
->>>>>>> 8400df8a60e4c36ea817937257958cdec7a03838
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
