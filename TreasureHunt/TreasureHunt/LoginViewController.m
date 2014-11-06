@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import <Parse/Parse.h>
+#import "Toast.h"
 #import "HomeViewController.h"
 
 @interface LoginViewController () <PFLogInViewControllerDelegate>
@@ -28,7 +29,8 @@
 -(void)login:(UIButton *)sender{
     NSString *username = self.username.text;
     NSString *pass = self.password.text;
-    [self loginUserWithName:username andPassword:pass];
+
+        [self loginUserWithName:username andPassword:pass];   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,14 +43,23 @@
     [PFUser logInWithUsernameInBackground:username password:password
                                     block:^(PFUser *user, NSError *error){
         if(user){
-            HomeViewController *homeController = [[HomeViewController alloc] init];
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            HomeViewController *homeController = (HomeViewController *)[storyboard instantiateViewControllerWithIdentifier:@"home"];
             [self presentViewController:homeController animated:YES completion:nil];
         }
         else{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login failed!" message:@"Incorrect username or password." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login failed!" message:@"Check the correctness of your username and password and make sure you have Internet access!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
         }
     }];
+}
+
+-(BOOL) validate:(NSString*) input{
+    NSString *trimmed = [input stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    if(!(trimmed == nil)){
+        return YES;
+    }
+    return NO;
 }
 /*
 #pragma mark - Navigation

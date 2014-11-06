@@ -21,6 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Parse setApplicationId:@"LdDZ0p4n4EbVPNkU1Pc8I5VedgNepgsC4rlyRWBs"
                   clientKey:@"QWj1wZCFrY1P3eonq8ZpbXiMUggXei2jYCCWkz6U"];
+    [PFUser logOut];
     PFUser *currentUser = [PFUser currentUser];
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
