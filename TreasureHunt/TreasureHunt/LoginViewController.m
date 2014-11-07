@@ -44,7 +44,7 @@
                                     block:^(PFUser *user, NSError *error){
         if(user){
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            HomeViewController *homeController = (HomeViewController *)[storyboard instantiateViewControllerWithIdentifier:@"home"];
+            HomeViewController *homeController = (HomeViewController *)[storyboard instantiateViewControllerWithIdentifier:@"cachesList"];
             [self presentViewController:homeController animated:YES completion:nil];
         }
         else{
