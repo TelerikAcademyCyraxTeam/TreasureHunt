@@ -29,6 +29,10 @@
 		849D9C561A0A5B3F007CFD38 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C551A0A5B3F007CFD38 /* LoginViewController.m */; };
 		849D9C591A0A69DF007CFD38 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C581A0A69DF007CFD38 /* RegisterViewController.m */; };
 		849D9C5C1A0A791E007CFD38 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C5B1A0A791E007CFD38 /* HomeViewController.m */; };
+		84A70B821A0D120D00EDF4CB /* Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A70B811A0D120D00EDF4CB /* Cache.m */; };
+		84A7ADCD1A0CBC6B005A5E96 /* CodeDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A7ADCC1A0CBC6B005A5E96 /* CodeDataHelper.m */; };
+		84A7ADCF1A0CD77B005A5E96 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A7ADCE1A0CD77B005A5E96 /* CoreData.framework */; };
+		84A7ADD21A0CE023005A5E96 /* CacheModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84A7ADD01A0CE023005A5E96 /* CacheModel.xcdatamodeld */; };
 		84EE3E2B1A0BB99F0039FD9C /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE3E2A1A0BB99F0039FD9C /* Toast.m */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +77,12 @@
 		849D9C581A0A69DF007CFD38 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		849D9C5A1A0A791E007CFD38 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		849D9C5B1A0A791E007CFD38 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		84A70B801A0D120D00EDF4CB /* Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cache.h; sourceTree = "<group>"; };
+		84A70B811A0D120D00EDF4CB /* Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cache.m; sourceTree = "<group>"; };
+		84A7ADCB1A0CBC6B005A5E96 /* CodeDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeDataHelper.h; sourceTree = "<group>"; };
+		84A7ADCC1A0CBC6B005A5E96 /* CodeDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeDataHelper.m; sourceTree = "<group>"; };
+		84A7ADCE1A0CD77B005A5E96 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		84A7ADD11A0CE023005A5E96 /* CacheModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CacheModel.xcdatamodel; sourceTree = "<group>"; };
 		84EE3E291A0BB99F0039FD9C /* Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Toast.h; path = ../Toast.h; sourceTree = "<group>"; };
 		84EE3E2A1A0BB99F0039FD9C /* Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Toast.m; path = ../Toast.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A7ADCF1A0CD77B005A5E96 /* CoreData.framework in Frameworks */,
 				8460CB211A0954B30036BCB3 /* libz.1.1.3.dylib in Frameworks */,
 				8460CB1F1A0954A10036BCB3 /* SystemConfiguration.framework in Frameworks */,
 				8460CB1D1A0954940036BCB3 /* StoreKit.framework in Frameworks */,
@@ -130,6 +141,7 @@
 		8460CAC91A066AD10036BCB3 /* TreasureHunt */ = {
 			isa = PBXGroup;
 			children = (
+				84A70B831A0D1F7C00EDF4CB /* LocalDB */,
 				8460CACF1A066AD10036BCB3 /* AppDelegate.m */,
 				8460CACE1A066AD10036BCB3 /* AppDelegate.h */,
 				84EE3E291A0BB99F0039FD9C /* Toast.h */,
@@ -177,6 +189,7 @@
 		8460CB281A095D190036BCB3 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				84A7ADCE1A0CD77B005A5E96 /* CoreData.framework */,
 				84031B5D1A0A508E00BDDE91 /* Bolts.framework */,
 				84031B5E1A0A508E00BDDE91 /* Parse.framework */,
 				84031B5F1A0A508E00BDDE91 /* ParseFacebookUtils.framework */,
@@ -192,6 +205,18 @@
 				8460CB1C1A0954940036BCB3 /* StoreKit.framework */,
 			);
 			name = Libs;
+			sourceTree = "<group>";
+		};
+		84A70B831A0D1F7C00EDF4CB /* LocalDB */ = {
+			isa = PBXGroup;
+			children = (
+				84A7ADD01A0CE023005A5E96 /* CacheModel.xcdatamodeld */,
+				84A70B801A0D120D00EDF4CB /* Cache.h */,
+				84A70B811A0D120D00EDF4CB /* Cache.m */,
+				84A7ADCB1A0CBC6B005A5E96 /* CodeDataHelper.h */,
+				84A7ADCC1A0CBC6B005A5E96 /* CodeDataHelper.m */,
+			);
+			name = LocalDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,11 +319,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A70B821A0D120D00EDF4CB /* Cache.m in Sources */,
 				8460CAD01A066AD10036BCB3 /* AppDelegate.m in Sources */,
 				8460CACD1A066AD10036BCB3 /* main.m in Sources */,
 				849D9C561A0A5B3F007CFD38 /* LoginViewController.m in Sources */,
 				84EE3E2B1A0BB99F0039FD9C /* Toast.m in Sources */,
+				84A7ADD21A0CE023005A5E96 /* CacheModel.xcdatamodeld in Sources */,
 				849D9C5C1A0A791E007CFD38 /* HomeViewController.m in Sources */,
+				84A7ADCD1A0CBC6B005A5E96 /* CodeDataHelper.m in Sources */,
 				849D9C591A0A69DF007CFD38 /* RegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/admin/Downloads/parse-library-1.4.2",
@@ -438,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/admin/Downloads/parse-library-1.4.2",
@@ -514,6 +544,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84A7ADD01A0CE023005A5E96 /* CacheModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84A7ADD11A0CE023005A5E96 /* CacheModel.xcdatamodel */,
+			);
+			currentVersion = 84A7ADD11A0CE023005A5E96 /* CacheModel.xcdatamodel */;
+			path = CacheModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8460CABF1A066AD10036BCB3 /* Project object */;
 }
