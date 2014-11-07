@@ -33,18 +33,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gu-CU-85e">
-                                <rect key="frame" x="268" y="325" width="65" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="R9A-wa-NEV"/>
-                                </constraints>
-                                <state key="normal" title="Login">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CfZ-J6-P1j"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKc-cc-qRO">
                                 <rect key="frame" x="209" y="374" width="196" height="30"/>
                                 <constraints>
@@ -55,6 +43,18 @@
                                 </state>
                                 <connections>
                                     <segue destination="Ngh-g5-pWl" kind="show" id="5xx-90-eAp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gu-CU-85e">
+                                <rect key="frame" x="268" y="325" width="65" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="R9A-wa-NEV"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CfZ-J6-P1j"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -127,20 +127,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D6j-ly-FC8">
-                                <rect key="frame" x="161" y="310" width="232" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="232" id="geL-gh-6cb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xSe-TN-oTZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xSe-TN-oTZ">
                                 <rect key="frame" x="161" y="348" width="232" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZX7-Ik-tig">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZX7-Ik-tig">
                                 <rect key="frame" x="161" y="395" width="232" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -157,10 +149,18 @@
                                     <action selector="registerUser:" destination="Ngh-g5-pWl" eventType="touchUpInside" id="jcp-aY-Yj0"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SVp-6t-cw8">
-                                <rect key="frame" x="166" y="440" width="227" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SVp-6t-cw8">
+                                <rect key="frame" x="161" y="440" width="232" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="227" id="mNm-Ah-Mz4"/>
+                                    <constraint firstAttribute="width" constant="232" id="mNm-Ah-Mz4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D6j-ly-FC8">
+                                <rect key="frame" x="161" y="310" width="232" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="232" id="geL-gh-6cb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -179,7 +179,7 @@
                             <constraint firstItem="0rn-Y7-uE1" firstAttribute="leading" secondItem="LFc-IM-JkX" secondAttribute="leading" constant="216" id="hBY-yc-HaZ"/>
                             <constraint firstItem="D6j-ly-FC8" firstAttribute="leading" secondItem="xSe-TN-oTZ" secondAttribute="leading" id="keW-Dp-83i"/>
                             <constraint firstItem="xSe-TN-oTZ" firstAttribute="leading" secondItem="ZX7-Ik-tig" secondAttribute="leading" id="koT-Cx-tzz"/>
-                            <constraint firstItem="D6j-ly-FC8" firstAttribute="leading" secondItem="LFc-IM-JkX" secondAttribute="leading" constant="161" id="sKL-dh-OVM"/>
+                            <constraint firstAttribute="centerX" secondItem="D6j-ly-FC8" secondAttribute="centerX" id="y9w-WS-z3A"/>
                         </constraints>
                     </view>
                     <connections>
