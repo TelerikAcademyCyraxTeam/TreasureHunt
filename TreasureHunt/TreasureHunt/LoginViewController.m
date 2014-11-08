@@ -24,13 +24,17 @@
     //[self presentViewController:login animated:YES completion:nil];
     
     // Do any additional setup after loading the view.
+    //UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
+    //[self.view addSubview:backgroundView];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
 }
 
 -(void)login:(UIButton *)sender{
     NSString *username = self.username.text;
     NSString *pass = self.password.text;
 
-        [self loginUserWithName:username andPassword:pass];   
+    [self loginUserWithName:username andPassword:pass];
 }
 
 - (void)didReceiveMemoryWarning {

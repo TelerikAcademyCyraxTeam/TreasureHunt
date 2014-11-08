@@ -29,6 +29,13 @@
 		849D9C561A0A5B3F007CFD38 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C551A0A5B3F007CFD38 /* LoginViewController.m */; };
 		849D9C591A0A69DF007CFD38 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C581A0A69DF007CFD38 /* RegisterViewController.m */; };
 		849D9C5C1A0A791E007CFD38 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C5B1A0A791E007CFD38 /* HomeViewController.m */; };
+		84A33AD81A0E39DD00BDF651 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84A33AD11A0E39DD00BDF651 /* background.jpg */; };
+		84A33AD91A0E39DD00BDF651 /* homeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A33AD21A0E39DD00BDF651 /* homeBackground.png */; };
+		84A33ADA1A0E39DD00BDF651 /* loginbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A33AD31A0E39DD00BDF651 /* loginbutton.png */; };
+		84A33ADB1A0E39DD00BDF651 /* treasure_chest_add.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A33AD41A0E39DD00BDF651 /* treasure_chest_add.png */; };
+		84A33ADC1A0E39DD00BDF651 /* treasure_chest_diskette.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A33AD51A0E39DD00BDF651 /* treasure_chest_diskette.png */; };
+		84A33ADD1A0E39DD00BDF651 /* treasure_chest.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A33AD61A0E39DD00BDF651 /* treasure_chest.png */; };
+		84A33ADE1A0E39DD00BDF651 /* treasure-map-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A33AD71A0E39DD00BDF651 /* treasure-map-icon.png */; };
 		84A70B821A0D120D00EDF4CB /* Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A70B811A0D120D00EDF4CB /* Cache.m */; };
 		84A7ADCD1A0CBC6B005A5E96 /* CodeDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A7ADCC1A0CBC6B005A5E96 /* CodeDataHelper.m */; };
 		84A7ADCF1A0CD77B005A5E96 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A7ADCE1A0CD77B005A5E96 /* CoreData.framework */; };
@@ -77,6 +84,13 @@
 		849D9C581A0A69DF007CFD38 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		849D9C5A1A0A791E007CFD38 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		849D9C5B1A0A791E007CFD38 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		84A33AD11A0E39DD00BDF651 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		84A33AD21A0E39DD00BDF651 /* homeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeBackground.png; sourceTree = "<group>"; };
+		84A33AD31A0E39DD00BDF651 /* loginbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginbutton.png; sourceTree = "<group>"; };
+		84A33AD41A0E39DD00BDF651 /* treasure_chest_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treasure_chest_add.png; sourceTree = "<group>"; };
+		84A33AD51A0E39DD00BDF651 /* treasure_chest_diskette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treasure_chest_diskette.png; sourceTree = "<group>"; };
+		84A33AD61A0E39DD00BDF651 /* treasure_chest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treasure_chest.png; sourceTree = "<group>"; };
+		84A33AD71A0E39DD00BDF651 /* treasure-map-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "treasure-map-icon.png"; sourceTree = "<group>"; };
 		84A70B801A0D120D00EDF4CB /* Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cache.h; sourceTree = "<group>"; };
 		84A70B811A0D120D00EDF4CB /* Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cache.m; sourceTree = "<group>"; };
 		84A7ADCB1A0CBC6B005A5E96 /* CodeDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeDataHelper.h; sourceTree = "<group>"; };
@@ -141,6 +155,7 @@
 		8460CAC91A066AD10036BCB3 /* TreasureHunt */ = {
 			isa = PBXGroup;
 			children = (
+				84A70B861A0D677100EDF4CB /* images */,
 				84A70B831A0D1F7C00EDF4CB /* LocalDB */,
 				8460CACF1A066AD10036BCB3 /* AppDelegate.m */,
 				8460CACE1A066AD10036BCB3 /* AppDelegate.h */,
@@ -217,6 +232,20 @@
 				84A7ADCC1A0CBC6B005A5E96 /* CodeDataHelper.m */,
 			);
 			name = LocalDB;
+			sourceTree = "<group>";
+		};
+		84A70B861A0D677100EDF4CB /* images */ = {
+			isa = PBXGroup;
+			children = (
+				84A33AD11A0E39DD00BDF651 /* background.jpg */,
+				84A33AD21A0E39DD00BDF651 /* homeBackground.png */,
+				84A33AD31A0E39DD00BDF651 /* loginbutton.png */,
+				84A33AD41A0E39DD00BDF651 /* treasure_chest_add.png */,
+				84A33AD51A0E39DD00BDF651 /* treasure_chest_diskette.png */,
+				84A33AD61A0E39DD00BDF651 /* treasure_chest.png */,
+				84A33AD71A0E39DD00BDF651 /* treasure-map-icon.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,9 +328,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A33AD91A0E39DD00BDF651 /* homeBackground.png in Resources */,
+				84A33ADD1A0E39DD00BDF651 /* treasure_chest.png in Resources */,
 				8460CAD61A066AD10036BCB3 /* Main.storyboard in Resources */,
+				84A33AD81A0E39DD00BDF651 /* background.jpg in Resources */,
+				84A33ADE1A0E39DD00BDF651 /* treasure-map-icon.png in Resources */,
+				84A33ADC1A0E39DD00BDF651 /* treasure_chest_diskette.png in Resources */,
 				8460CADB1A066AD10036BCB3 /* LaunchScreen.xib in Resources */,
+				84A33ADB1A0E39DD00BDF651 /* treasure_chest_add.png in Resources */,
 				8460CAD81A066AD10036BCB3 /* Images.xcassets in Resources */,
+				84A33ADA1A0E39DD00BDF651 /* loginbutton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
