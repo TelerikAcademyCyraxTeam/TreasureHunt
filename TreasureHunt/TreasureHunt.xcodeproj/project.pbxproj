@@ -42,6 +42,7 @@
 		84EE3E541A0D59E30039FD9C /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE3E4D1A0D59E30039FD9C /* SWUtilityButtonTapGestureRecognizer.m */; };
 		84EE3E551A0D59E30039FD9C /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE3E4F1A0D59E30039FD9C /* SWUtilityButtonView.m */; };
 		84EE3E591A0D5A330039FD9C /* CacheListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE3E581A0D5A330039FD9C /* CacheListViewController.m */; };
+		84EE3E5F1A0D97950039FD9C /* NewCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE3E5E1A0D97950039FD9C /* NewCacheViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,8 @@
 		84EE3E4F1A0D59E30039FD9C /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWUtilityButtonView.m; path = "../../../../../Downloads/SWTableViewCell-master/SWTableViewCell/PodFiles/SWUtilityButtonView.m"; sourceTree = "<group>"; };
 		84EE3E571A0D5A330039FD9C /* CacheListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheListViewController.h; sourceTree = "<group>"; };
 		84EE3E581A0D5A330039FD9C /* CacheListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheListViewController.m; sourceTree = "<group>"; };
+		84EE3E5D1A0D97950039FD9C /* NewCacheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewCacheViewController.h; sourceTree = "<group>"; };
+		84EE3E5E1A0D97950039FD9C /* NewCacheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewCacheViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +255,8 @@
 				84EE3E421A0D59630039FD9C /* CacheCellTableViewCell.m */,
 				84EE3E571A0D5A330039FD9C /* CacheListViewController.h */,
 				84EE3E581A0D5A330039FD9C /* CacheListViewController.m */,
+				84EE3E5D1A0D97950039FD9C /* NewCacheViewController.h */,
+				84EE3E5E1A0D97950039FD9C /* NewCacheViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84EE3E5F1A0D97950039FD9C /* NewCacheViewController.m in Sources */,
 				84EE3E591A0D5A330039FD9C /* CacheListViewController.m in Sources */,
 				84A70B821A0D120D00EDF4CB /* Cache.m in Sources */,
 				8460CAD01A066AD10036BCB3 /* AppDelegate.m in Sources */,
