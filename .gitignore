@@ -12,7 +12,9 @@ build/
 *.xcworkspace
 !default.xcworkspace
 xcuserdata
+*.xccheckout
 profile
 *.moved-aside
 DerivedData
+*.xcuserstate
 .idea/
