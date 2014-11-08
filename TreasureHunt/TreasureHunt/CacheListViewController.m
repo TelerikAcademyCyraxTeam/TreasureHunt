@@ -9,6 +9,7 @@
 #import "CacheListViewController.h"
 #import "CacheCellTableViewCell.h"
 #import <Parse/Parse.h>
+#import <UIKit/UIKit.h>
 
 @interface CacheListViewController (){
    
@@ -41,10 +42,9 @@
     
     NSMutableArray *leftSideButtons = [NSMutableArray new];
     
-    [leftSideButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:1.0f green:1.0f blue:0.35f alpha:0.7f]title:@"Delete"];
-    [leftSideButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:1.0f green:1.0f blue:0.35f alpha:0.7f]title:@"Add"];
+    [leftSideButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.7f] icon:[UIImage imageNamed:@"treasure_map_min.png"]];
+    [leftSideButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.35f] icon:[UIImage imageNamed:@"treasure_chest_diskette_min.png"]];
 
-    [leftSideButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:1.0f green:1.0f blue:0.35f alpha:0.7f]title:@"Some more"];
     
     cell.leftUtilityButtons = leftSideButtons;
     cell.delegate = self;

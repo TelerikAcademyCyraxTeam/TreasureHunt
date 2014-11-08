@@ -7,6 +7,9 @@
 //
 
 #import "HomeViewController.h"
+#import <Parse/Parse.h>
+#import "CacheListViewController.h"
+#import "NewCacheViewController.h"
 
 @interface HomeViewController ()
 
@@ -36,4 +39,26 @@
 }
 */
 
+- (IBAction)listCaches:(UIButton *)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        CacheListViewController *cachesList = [storyboard instantiateViewControllerWithIdentifier:@"cachesList"];
+        PFQuery *query = [PFQuery queryWithClassName:@"Cash"];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if(!error){
+                cachesList.caches = objects;
+                [self presentViewController:cachesList animated:YES completion:nil];
+            }
+            else{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fetching data failed!" message:@"Check connection!"  delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [alert show];
+            }
+        }];
+
+}
+
+- (IBAction)addCache:(UIButton *)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    NewCacheViewController *newCacheView = [storyboard instantiateViewControllerWithIdentifier:@"newCache"];
+    [self presentViewController:newCacheView animated:YES completion:nil];
+}
 @end
