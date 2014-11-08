@@ -23,7 +23,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Parse setApplicationId:@"LdDZ0p4n4EbVPNkU1Pc8I5VedgNepgsC4rlyRWBs"
                   clientKey:@"QWj1wZCFrY1P3eonq8ZpbXiMUggXei2jYCCWkz6U"];
-   // [PFUser logOut];
+    //[PFUser logOut];
     
     [GMSServices provideAPIKey:@"AIzaSyAf4gnOc6PHK2JRvmYKRzlXmeskLLXY4lY"];
     

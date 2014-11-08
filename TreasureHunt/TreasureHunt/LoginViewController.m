@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "Toast.h"
 #import "HomeViewController.h"
+#import "MapViewController.h"
 
 @interface LoginViewController () <PFLogInViewControllerDelegate>
 
@@ -50,6 +51,11 @@
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             HomeViewController *homeController = (HomeViewController *)[storyboard instantiateViewControllerWithIdentifier:@"home"];
             [self presentViewController:homeController animated:YES completion:nil];
+            
+            //testing some sh*ts, no meaning at all :)
+            //MapViewController *mapController = (MapViewController *)[storyboard instantiateViewControllerWithIdentifier:@"map"];
+            //[self presentViewController:mapController animated:YES completion:nil];
+            
         }
         else{
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login failed!" message:@"Check the correctness of your username and password and make sure you have Internet access!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];

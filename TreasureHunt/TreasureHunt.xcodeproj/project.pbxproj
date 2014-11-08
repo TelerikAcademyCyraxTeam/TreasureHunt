@@ -39,6 +39,7 @@
 		84A28A001A0E7D0B00C9DD6F /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A289FF1A0E7D0B00C9DD6F /* libicucore.dylib */; };
 		84A28A021A0E7D1F00C9DD6F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A28A011A0E7D1F00C9DD6F /* libz.dylib */; };
 		84A28A041A0E7D3000C9DD6F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A28A031A0E7D3000C9DD6F /* OpenGLES.framework */; };
+		84A28A071A0E8B7E00C9DD6F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A28A061A0E8B7E00C9DD6F /* MapViewController.m */; };
 		84A70B821A0D120D00EDF4CB /* Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A70B811A0D120D00EDF4CB /* Cache.m */; };
 		84A7ADCD1A0CBC6B005A5E96 /* CodeDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A7ADCC1A0CBC6B005A5E96 /* CodeDataHelper.m */; };
 		84A7ADCF1A0CD77B005A5E96 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A7ADCE1A0CD77B005A5E96 /* CoreData.framework */; };
@@ -115,6 +116,8 @@
 		84A289FF1A0E7D0B00C9DD6F /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		84A28A011A0E7D1F00C9DD6F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		84A28A031A0E7D3000C9DD6F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		84A28A051A0E8B7D00C9DD6F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		84A28A061A0E8B7E00C9DD6F /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		84A70B801A0D120D00EDF4CB /* Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cache.h; sourceTree = "<group>"; };
 		84A70B811A0D120D00EDF4CB /* Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cache.m; sourceTree = "<group>"; };
 		84A7ADCB1A0CBC6B005A5E96 /* CodeDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeDataHelper.h; sourceTree = "<group>"; };
@@ -315,6 +318,8 @@
 				84EE3E421A0D59630039FD9C /* CacheCellTableViewCell.m */,
 				84EE3E571A0D5A330039FD9C /* CacheListViewController.h */,
 				84EE3E581A0D5A330039FD9C /* CacheListViewController.m */,
+				84A28A051A0E8B7D00C9DD6F /* MapViewController.h */,
+				84A28A061A0E8B7E00C9DD6F /* MapViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -480,6 +485,7 @@
 				84A7ADD21A0CE023005A5E96 /* CacheModel.xcdatamodeld in Sources */,
 				84F780911A0E6C4C00B90A0A /* SWTableViewCell.m in Sources */,
 				849D9C5C1A0A791E007CFD38 /* HomeViewController.m in Sources */,
+				84A28A071A0E8B7E00C9DD6F /* MapViewController.m in Sources */,
 				84A7ADCD1A0CBC6B005A5E96 /* CodeDataHelper.m in Sources */,
 				849D9C591A0A69DF007CFD38 /* RegisterViewController.m in Sources */,
 			);
