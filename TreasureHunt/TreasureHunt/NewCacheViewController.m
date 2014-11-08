@@ -8,6 +8,7 @@
 
 #import "NewCacheViewController.h"
 #import <Parse/Parse.h>
+#import "Toast.h"
 
 @interface NewCacheViewController ()
 
@@ -59,8 +60,8 @@
 
 - (IBAction)createCache:(UIButton *)sender {
     [self getLocation];
-    NSString *name = self.cacheName.text;
-    NSString *location = self.cacheLocation.text;
+    NSString *name = self.name.text;
+    NSString *location = self.locatedIn.text;
     NSString *cacheDescription = self.cacheDescription.text;
     NSString *cacheHints = self.hints.text;
     PFObject *cache = [[PFObject alloc] initWithClassName:@"Cash"];
@@ -71,8 +72,16 @@
     cache[@"hint"] = cacheHints;
     cache[@"isFound"] = [NSNumber numberWithBool:NO];
     cache[@"createdBy"] = currentUser.username;
-    //cache[@"latitude"] = currentLocation.coordinate.latitude;
-    //cache[@"longitude"] = currentLocation.coordinate.longitude
-    
+    PFGeoPoint *cacheLocation = [PFGeoPoint geoPointWithLatitude:currentLocation.coordinate.latitude longitude:currentLocation.coordinate.longitude];
+    cache[@"location"] = cacheLocation;
+    [cache saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if(!error){
+            [self.view makeToast:@"Cache created!"];
+        }
+        else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Create command failed!" message:@"check newCacheViewController" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+    }];
 }
 @end

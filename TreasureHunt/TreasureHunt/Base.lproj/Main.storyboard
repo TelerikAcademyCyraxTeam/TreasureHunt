@@ -123,12 +123,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="UEX-6F-qsz">
-                                <rect key="frame" x="16" y="279" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Hints" translatesAutoresizingMaskIntoConstraints="NO" id="pju-iW-JUh">
                                 <rect key="frame" x="329" y="279" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -141,17 +135,23 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="createCache:" destination="gxL-Zm-1mh" eventType="touchUpInside" id="AC2-4M-Wg4"/>
+                                    <action selector="createCache:" destination="gxL-Zm-1mh" eventType="touchUpInside" id="B2C-WG-vpV"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="UEX-6F-qsz">
+                                <rect key="frame" x="16" y="279" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="cacheDescription" destination="UEX-6F-qsz" id="MSk-cR-F01"/>
-                        <outlet property="cacheLocation" destination="rnv-hg-vDv" id="GvR-A1-EyF"/>
-                        <outlet property="cacheName" destination="xxn-4B-Hlh" id="Smv-wf-KZ5"/>
-                        <outlet property="hints" destination="pju-iW-JUh" id="Sy2-Id-Hvv"/>
+                        <outlet property="cacheDescription" destination="UEX-6F-qsz" id="kmF-Rg-RUp"/>
+                        <outlet property="hints" destination="pju-iW-JUh" id="Sch-DC-298"/>
+                        <outlet property="locatedIn" destination="rnv-hg-vDv" id="zu2-3t-tk4"/>
+                        <outlet property="name" destination="xxn-4B-Hlh" id="bUz-pI-ovH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCc-4x-97m" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -10,10 +10,12 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface NewCacheViewController : UIViewController<CLLocationManagerDelegate>
-- (IBAction)createCache:(UIButton *)sender;
-@property (weak, nonatomic) IBOutlet UITextView *hints;
+@property (weak, nonatomic) IBOutlet UITextField *name;
+@property (weak, nonatomic) IBOutlet UITextField *locatedIn;
 @property (weak, nonatomic) IBOutlet UITextView *cacheDescription;
-@property (weak, nonatomic) IBOutlet UITextField *cacheLocation;
-@property (weak, nonatomic) IBOutlet UITextField *cacheName;
+@property (weak, nonatomic) IBOutlet UITextView *hints;
+- (IBAction)createCache:(UIButton *)sender;
+
+
 
 @end
