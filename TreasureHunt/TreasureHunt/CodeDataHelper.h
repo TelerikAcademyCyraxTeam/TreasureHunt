@@ -19,4 +19,6 @@
 - (void)saveContext;
 - (void)setupCoreData;
 
++(id)getInstance;
+
 @end
