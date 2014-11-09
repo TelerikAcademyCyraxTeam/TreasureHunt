@@ -405,109 +405,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nb6-zU-uPO">
-                                <rect key="frame" x="103" y="333" width="73" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVj-Bw-HId">
+                                <rect key="frame" x="76" y="338" width="95" height="103"/>
                                 <state key="normal" backgroundImage="treasure_chest_add.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="addCache:" destination="iYT-gv-rGz" eventType="touchUpInside" id="Lzw-TA-ZQu"/>
+                                    <action selector="addCache:" destination="mPt-P3-suR" eventType="touchUpInside" id="Ma1-m1-KJW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKb-JN-50P">
-                                <rect key="frame" x="193" y="257" width="73" height="74"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdB-sV-djH">
+                                <rect key="frame" x="188" y="237" width="95" height="103"/>
                                 <state key="normal" backgroundImage="treasure_chest.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="listCaches:" destination="iYT-gv-rGz" eventType="touchUpInside" id="5tC-Wr-cRL"/>
+                                    <action selector="listCaches:" destination="mPt-P3-suR" eventType="touchUpInside" id="A7b-CP-H3Q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H12-bf-9UW">
-                                <rect key="frame" x="109" y="257" width="76" height="74"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="74" id="C5h-uQ-z3d"/>
-                                    <constraint firstAttribute="width" constant="76" id="eyH-gV-tdn"/>
-                                    <constraint firstAttribute="width" constant="76" id="nZe-If-qun"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPU-PP-WFx">
+                                <rect key="frame" x="76" y="237" width="95" height="103"/>
                                 <state key="normal" backgroundImage="treasure-map-icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="eyH-gV-tdn"/>
-                                    </mask>
-                                </variation>
                                 <connections>
-                                    <action selector="loadMap:" destination="iYT-gv-rGz" eventType="touchUpInside" id="JvM-2a-oCX"/>
+                                    <action selector="loadMap:" destination="mPt-P3-suR" eventType="touchUpInside" id="Aey-ka-Uj8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LS-tf-KJy">
-                                <rect key="frame" x="193" y="333" width="73" height="69"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="WCm-0E-hAE"/>
-                                    <constraint firstAttribute="width" constant="73" id="tvG-ZD-FU8"/>
-                                    <constraint firstAttribute="height" constant="74" id="uYL-Tp-eed"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Roz-jx-oa7">
+                                <rect key="frame" x="188" y="338" width="95" height="103"/>
                                 <state key="normal" backgroundImage="treasure_chest_diskette.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="WCm-0E-hAE"/>
-                                        <exclude reference="uYL-Tp-eed"/>
-                                    </mask>
-                                </variation>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="4LS-tf-KJy" firstAttribute="leading" secondItem="SKb-JN-50P" secondAttribute="leading" id="1m1-Ul-xam"/>
-                            <constraint firstItem="H12-bf-9UW" firstAttribute="leading" secondItem="TFf-UJ-vgD" secondAttribute="leadingMargin" constant="93" id="2rz-6o-nbQ"/>
-                            <constraint firstItem="H12-bf-9UW" firstAttribute="firstBaseline" secondItem="SKb-JN-50P" secondAttribute="firstBaseline" id="6Bc-Dl-lMl"/>
-                            <constraint firstItem="H12-bf-9UW" firstAttribute="top" secondItem="wI5-Hl-lFB" secondAttribute="bottom" constant="237" id="8Uq-Ph-3vz"/>
-                            <constraint firstItem="nb6-zU-uPO" firstAttribute="leading" secondItem="TFf-UJ-vgD" secondAttribute="leadingMargin" constant="87" id="EpQ-ne-F0N"/>
-                            <constraint firstItem="4LS-tf-KJy" firstAttribute="leading" secondItem="TFf-UJ-vgD" secondAttribute="leading" constant="186" id="EzE-JI-jpn"/>
-                            <constraint firstItem="4LS-tf-KJy" firstAttribute="leading" secondItem="SKb-JN-50P" secondAttribute="leading" id="FRH-Bj-k9h"/>
-                            <constraint firstItem="4LS-tf-KJy" firstAttribute="leading" secondItem="SKb-JN-50P" secondAttribute="leading" id="J1K-Vg-mYX"/>
-                            <constraint firstItem="H12-bf-9UW" firstAttribute="baseline" secondItem="SKb-JN-50P" secondAttribute="baseline" id="Jn4-el-DBV"/>
-                            <constraint firstAttribute="centerX" secondItem="nb6-zU-uPO" secondAttribute="centerX" id="LV8-2P-tiA"/>
-                            <constraint firstItem="H12-bf-9UW" firstAttribute="top" secondItem="SKb-JN-50P" secondAttribute="top" id="NhB-UY-qhR"/>
-                            <constraint firstItem="4LS-tf-KJy" firstAttribute="leading" secondItem="nb6-zU-uPO" secondAttribute="trailing" constant="17" id="QRt-2e-2fv"/>
-                            <constraint firstItem="4LS-tf-KJy" firstAttribute="leading" secondItem="nb6-zU-uPO" secondAttribute="trailing" constant="17" id="SNT-pW-lz0"/>
-                            <constraint firstItem="H12-bf-9UW" firstAttribute="leading" secondItem="TFf-UJ-vgD" secondAttribute="leadingMargin" constant="93" id="T1h-4R-nkC"/>
-                            <constraint firstItem="nb6-zU-uPO" firstAttribute="baseline" secondItem="4LS-tf-KJy" secondAttribute="baseline" id="TOk-FW-BVN"/>
-                            <constraint firstItem="ap0-EY-dqX" firstAttribute="top" secondItem="4LS-tf-KJy" secondAttribute="bottom" constant="197" id="V9B-Ir-ZK2"/>
-                            <constraint firstItem="4LS-tf-KJy" firstAttribute="trailing" secondItem="SKb-JN-50P" secondAttribute="trailing" id="YNC-u6-AuN"/>
-                            <constraint firstItem="H12-bf-9UW" firstAttribute="bottom" secondItem="SKb-JN-50P" secondAttribute="bottom" id="aS6-uz-Lfw"/>
-                            <constraint firstItem="nb6-zU-uPO" firstAttribute="top" secondItem="H12-bf-9UW" secondAttribute="bottom" constant="2" id="bGi-Mo-DLY"/>
-                            <constraint firstItem="SKb-JN-50P" firstAttribute="leading" secondItem="H12-bf-9UW" secondAttribute="trailing" constant="8" symbolic="YES" id="bKI-56-hus"/>
-                            <constraint firstItem="H12-bf-9UW" firstAttribute="baseline" secondItem="SKb-JN-50P" secondAttribute="baseline" id="gq6-1g-V2e"/>
-                            <constraint firstItem="nb6-zU-uPO" firstAttribute="top" secondItem="4LS-tf-KJy" secondAttribute="top" id="jCI-xb-Z0Y"/>
-                            <constraint firstItem="H12-bf-9UW" firstAttribute="firstBaseline" secondItem="SKb-JN-50P" secondAttribute="firstBaseline" id="k0W-8E-AKe"/>
-                            <constraint firstItem="4LS-tf-KJy" firstAttribute="top" secondItem="SKb-JN-50P" secondAttribute="bottom" constant="2" id="k92-Tv-m4V"/>
-                            <constraint firstAttribute="centerX" secondItem="SKb-JN-50P" secondAttribute="centerX" id="mO3-t8-SbX"/>
-                            <constraint firstItem="ap0-EY-dqX" firstAttribute="top" secondItem="nb6-zU-uPO" secondAttribute="bottom" constant="197" id="pnt-y3-HcE"/>
-                            <constraint firstItem="ap0-EY-dqX" firstAttribute="top" secondItem="4LS-tf-KJy" secondAttribute="bottom" constant="198" id="ugZ-I6-pw0"/>
-                            <constraint firstItem="nb6-zU-uPO" firstAttribute="firstBaseline" secondItem="4LS-tf-KJy" secondAttribute="firstBaseline" id="v2g-0P-0pw"/>
-                            <constraint firstAttribute="centerX" secondItem="4LS-tf-KJy" secondAttribute="centerX" id="vAW-Oz-0nT"/>
-                            <constraint firstItem="SKb-JN-50P" firstAttribute="leading" secondItem="H12-bf-9UW" secondAttribute="trailing" constant="8" symbolic="YES" id="vLA-NJ-oSM"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="2rz-6o-nbQ"/>
-                                <exclude reference="bKI-56-hus"/>
-                                <exclude reference="mO3-t8-SbX"/>
-                                <exclude reference="LV8-2P-tiA"/>
-                                <exclude reference="EzE-JI-jpn"/>
-                                <exclude reference="FRH-Bj-k9h"/>
-                                <exclude reference="J1K-Vg-mYX"/>
-                                <exclude reference="QRt-2e-2fv"/>
-                                <exclude reference="k92-Tv-m4V"/>
-                                <exclude reference="vAW-Oz-0nT"/>
-                                <exclude reference="V9B-Ir-ZK2"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MWF-Oa-Pyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -527,7 +459,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIg-Gh-gEz">
-                                <rect key="frame" x="122" y="307" width="95" height="103"/>
+                                <rect key="frame" x="83" y="327" width="95" height="103"/>
                                 <state key="normal" backgroundImage="treasure_chest_add.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -536,7 +468,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8C-WZ-OxA">
-                                <rect key="frame" x="235" y="196" width="95" height="103"/>
+                                <rect key="frame" x="196" y="216" width="95" height="103"/>
                                 <state key="normal" backgroundImage="treasure_chest.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -545,7 +477,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHU-Nt-7eS">
-                                <rect key="frame" x="117" y="196" width="95" height="103"/>
+                                <rect key="frame" x="83" y="216" width="95" height="103"/>
                                 <state key="normal" backgroundImage="treasure-map-icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -554,7 +486,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rY1-T0-jrJ">
-                                <rect key="frame" x="235" y="307" width="95" height="103"/>
+                                <rect key="frame" x="196" y="327" width="95" height="103"/>
                                 <state key="normal" backgroundImage="treasure_chest_diskette.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
