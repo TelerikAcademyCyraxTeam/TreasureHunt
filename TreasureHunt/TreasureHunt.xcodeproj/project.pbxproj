@@ -62,6 +62,7 @@
 		84F780921A0E6C4C00B90A0A /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F7808C1A0E6C4C00B90A0A /* SWUtilityButtonTapGestureRecognizer.m */; };
 		84F780931A0E6C4C00B90A0A /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F7808E1A0E6C4C00B90A0A /* SWUtilityButtonView.m */; };
 		84F780961A0E729B00B90A0A /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F780951A0E729B00B90A0A /* NSMutableArray+SWUtilityButtons.m */; };
+		84F780D11A0FA0FE00B90A0A /* LongPressHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F780D01A0FA0FE00B90A0A /* LongPressHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +153,8 @@
 		84F7808E1A0E6C4C00B90A0A /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
 		84F780941A0E729B00B90A0A /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
 		84F780951A0E729B00B90A0A /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
+		84F780CF1A0FA0FE00B90A0A /* LongPressHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LongPressHomeViewController.h; sourceTree = "<group>"; };
+		84F780D01A0FA0FE00B90A0A /* LongPressHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LongPressHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +321,8 @@
 				84EE3E581A0D5A330039FD9C /* CacheListViewController.m */,
 				84A28A051A0E8B7D00C9DD6F /* MapViewController.h */,
 				84A28A061A0E8B7E00C9DD6F /* MapViewController.m */,
+				84F780CF1A0FA0FE00B90A0A /* LongPressHomeViewController.h */,
+				84F780D01A0FA0FE00B90A0A /* LongPressHomeViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -468,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84F780801A0E4C9B00B90A0A /* NewCacheViewController.m in Sources */,
+				84F780D11A0FA0FE00B90A0A /* LongPressHomeViewController.m in Sources */,
 				84F780901A0E6C4C00B90A0A /* SWLongPressGestureRecognizer.m in Sources */,
 				84EE3E591A0D5A330039FD9C /* CacheListViewController.m in Sources */,
 				84F780931A0E6C4C00B90A0A /* SWUtilityButtonView.m in Sources */,
