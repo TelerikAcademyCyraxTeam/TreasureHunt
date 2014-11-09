@@ -111,7 +111,7 @@ static PFObject * selectedCache;
             NSString *currentCacheFoundBy = [selectedCache objectForKey:@"userFound"];
             NSNumber *currentCacheIsFound = [selectedCache objectForKey:@"isFound"];
             PFGeoPoint *currentCacheLocation = [selectedCache objectForKey:@"location"];
-            NSString *currentCacheId = [selectedCache objectForKey:@"objectId"];
+            NSString *currentCacheId = selectedCache.objectId;
             
             NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Cache"];
             //NSSortDescriptor *sort =
@@ -121,7 +121,7 @@ static PFObject * selectedCache;
             NSArray *fetchedObjects = [_cdHelper.context executeFetchRequest:request error:nil];
             
             for (Cache *cache in fetchedObjects) {
-                if (cache.cacheId == currentCacheId) {
+                if ([cache.cacheId isEqualToString: currentCacheId]){
                     //update existing cache
                     cache.name = currentCacheName;
                     cache.cacheDescription = currentCacheDescription;
@@ -137,29 +137,30 @@ static PFObject * selectedCache;
                     [self.cdHelper saveContext];
                     
                     [self.view makeToast:@"Updated in favorites"];
-                } else{
-                    //add new object to localDB
-                    Cache *currentCache = [NSEntityDescription insertNewObjectForEntityForName:@"Cache" inManagedObjectContext:_cdHelper.context];
-                    currentCache.name = currentCacheName;
-                    currentCache.cacheDescription = currentCacheDescription;
-                    currentCache.hint = currentCacheHint;
-                    currentCache.userCreated = currentCacheCreatedBy;
-                    if (!currentCacheFoundBy) {
-                        currentCache.userFoundIt = currentCacheFoundBy;
-                    }
-                    currentCache.isFound = currentCacheIsFound;
-                    currentCache.latitude = [NSNumber numberWithDouble: currentCacheLocation.latitude];
-                    currentCache.longitude = [NSNumber numberWithDouble: currentCacheLocation.longitude];
-                    currentCache.cacheId = currentCacheId;
                     
-                    [_cdHelper.context insertObject:currentCache];
-                    
-                    [self.cdHelper saveContext];
-                    
-                    [self.view makeToast:@"Added to favourites"];
+                    return;
                 }
             }
             
+                //add new object to localDB
+                Cache *currentCache = [NSEntityDescription insertNewObjectForEntityForName:@"Cache" inManagedObjectContext:_cdHelper.context];
+                currentCache.name = currentCacheName;
+                currentCache.cacheDescription = currentCacheDescription;
+                currentCache.hint = currentCacheHint;
+                currentCache.userCreated = currentCacheCreatedBy;
+                if (!currentCacheFoundBy) {
+                    currentCache.userFoundIt = currentCacheFoundBy;
+                }
+                currentCache.isFound = currentCacheIsFound;
+                currentCache.latitude = [NSNumber numberWithDouble: currentCacheLocation.latitude];
+                currentCache.longitude = [NSNumber numberWithDouble: currentCacheLocation.longitude];
+                currentCache.cacheId = currentCacheId;
+                
+                [_cdHelper.context insertObject:currentCache];
+                
+                [self.cdHelper saveContext];
+                
+                [self.view makeToast:@"Added to favourites"];
             break;
         }
         default:
