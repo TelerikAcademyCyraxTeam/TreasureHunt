@@ -424,7 +424,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="addCache:" destination="mPt-P3-suR" eventType="touchUpInside" id="Ma1-m1-KJW"/>
+                                    <action selector="addCache:" destination="iYT-gv-rGz" eventType="touchUpInside" id="Hyx-iW-RKh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdB-sV-djH">
@@ -433,16 +433,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="listCaches:" destination="mPt-P3-suR" eventType="touchUpInside" id="A7b-CP-H3Q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPU-PP-WFx">
-                                <rect key="frame" x="76" y="237" width="95" height="103"/>
-                                <state key="normal" backgroundImage="treasure-map-icon.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loadMap:" destination="mPt-P3-suR" eventType="touchUpInside" id="Aey-ka-Uj8"/>
+                                    <action selector="listCaches:" destination="iYT-gv-rGz" eventType="touchUpInside" id="58K-p8-Ob3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Roz-jx-oa7">
@@ -450,6 +441,15 @@
                                 <state key="normal" backgroundImage="treasure_chest_diskette.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPU-PP-WFx">
+                                <rect key="frame" x="76" y="237" width="95" height="103"/>
+                                <state key="normal" backgroundImage="treasure-map-icon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadMap:" destination="iYT-gv-rGz" eventType="touchUpInside" id="och-Yy-goD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -95,7 +95,7 @@
     cacheMarker.title = [selectedCache objectForKey:@"name"];
     cacheMarker.snippet = [NSString stringWithFormat:@"By %@", [selectedCache objectForKey:@"createdBy"]];
     cacheMarker.appearAnimation = kGMSMarkerAnimationPop;
-    cacheMarker.icon = [UIImage imageNamed:@"blue_marker.png"];
+   // cacheMarker.icon = [UIImage imageNamed:@"blue_marker.png"];
     cacheMarker.map = mapView_;
     
 }

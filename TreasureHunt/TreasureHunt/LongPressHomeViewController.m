@@ -68,7 +68,6 @@
     
 }
 
-
 - (IBAction)addCache:(UIButton *)sender {
     NewCacheViewController *newCacheView = [_storyboard instantiateViewControllerWithIdentifier:@"newCache"];
     [self presentViewController:newCacheView animated:YES completion:nil];
@@ -78,7 +77,6 @@
 - (IBAction)loadMap:(UIButton *)sender {
     MapViewController *newCacheView = [_storyboard instantiateViewControllerWithIdentifier:@"map"];
     [self presentViewController:newCacheView animated:YES completion:nil];
-    
 }
 
 @end
