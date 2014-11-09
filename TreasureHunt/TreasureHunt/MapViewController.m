@@ -14,19 +14,18 @@
 
 @implementation MapViewController{
     CLLocationManager *manager;
-    CLLocation *currentLocation;
+    CLLocation *_currentLocation;
     GMSMapView *mapView_;
     GMSCameraPosition *camera;
+    BOOL _isMapShowed;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
     manager = [[CLLocationManager alloc] init];
     [manager requestWhenInUseAuthorization];
     [self getLocation];
-    
+    _isMapShowed = NO;
     //[super viewDidLoad];
     //GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.868 longitude:151.2086 zoom:6];
     //self.view = [GMSMapView mapWithFrame:CGRectZero camera:camera];
@@ -41,8 +40,12 @@
 
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
-    currentLocation = [locations lastObject];
-    [self createMap];
+    _currentLocation = [locations lastObject];
+    if(!_isMapShowed){
+        [self createMap];
+        _isMapShowed = YES;
+    }
+    
 }
 
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
@@ -55,8 +58,8 @@
 -(void)createMap{
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
-    camera = [GMSCameraPosition cameraWithLatitude:currentLocation.coordinate.latitude
-                                         longitude:currentLocation.coordinate.longitude
+    camera = [GMSCameraPosition cameraWithLatitude:_currentLocation.coordinate.latitude
+                                         longitude:_currentLocation.coordinate.longitude
                                               zoom:15];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.delegate = self;
