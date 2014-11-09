@@ -13,6 +13,8 @@
 @end
 
 @implementation MapViewController{
+    CLLocationManager *manager;
+    CLLocation *currentLocation;
     GMSMapView *mapView_;
     GMSCameraPosition *camera;
 }
@@ -21,10 +23,40 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    manager = [[CLLocationManager alloc] init];
+    [manager requestWhenInUseAuthorization];
+    [self getLocation];
+    
+    //[super viewDidLoad];
+    //GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.868 longitude:151.2086 zoom:6];
+    //self.view = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+}
+
+-(void) getLocation {
+    manager.delegate = self;
+    manager.distanceFilter = 20;
+    manager.desiredAccuracy = kCLLocationAccuracyBest;
+    [manager startUpdatingLocation];
+}
+
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    currentLocation = [locations lastObject];
+    [self createMap];
+}
+
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed to get location!" message:@"Locating not completed" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    NSLog(@"Error: %@", error);
+    [alert show];
+}
+
+-(void)createMap{
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
-    camera = [GMSCameraPosition cameraWithLatitude:42.7
-                                         longitude:23.3333
+    camera = [GMSCameraPosition cameraWithLatitude:currentLocation.coordinate.latitude
+                                         longitude:currentLocation.coordinate.longitude
                                               zoom:15];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.delegate = self;
@@ -33,13 +65,11 @@
     
     // Creates a marker in the center of the map.
     GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = CLLocationCoordinate2DMake(42.7, 23.3333);
-    marker.title = @"Sydney";
-    marker.snippet = @"Australia";
+    marker.position = camera.target;//  CLLocationCoordinate2DMake(42.7, 23.3333);
+    marker.title = @"You are here!";
+    //marker.snippet = @"Australia";
     marker.map = mapView_;
-    //[super viewDidLoad];
-    //GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.868 longitude:151.2086 zoom:6];
-    //self.view = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+    
 }
 
 -(void)mapView:(GMSMapView *)mapView didChangeCameraPosition:(GMSCameraPosition *)position{
