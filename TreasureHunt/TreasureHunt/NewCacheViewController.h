@@ -16,6 +16,7 @@
 - (IBAction)createCache:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UITextView *cacheDescription;
 @property (weak, nonatomic) IBOutlet UITextView *hints;
+@property (weak, nonatomic) IBOutlet UILabel *selectedImage;
 
 
 

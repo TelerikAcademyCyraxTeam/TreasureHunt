@@ -69,6 +69,7 @@
     self.photo.image = selected;
     NewCacheViewController *parent = (NewCacheViewController *)[self presentingViewController];
     parent.image = selected;
+    parent.selectedImage.text = @"1 image selected";
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
