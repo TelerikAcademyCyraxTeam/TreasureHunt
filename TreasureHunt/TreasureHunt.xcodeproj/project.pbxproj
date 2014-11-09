@@ -66,6 +66,7 @@
 		84F780961A0E729B00B90A0A /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F780951A0E729B00B90A0A /* NSMutableArray+SWUtilityButtons.m */; };
 		84F780D11A0FA0FE00B90A0A /* LongPressHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F780D01A0FA0FE00B90A0A /* LongPressHomeViewController.m */; };
 		84F780D41A0FBEBF00B90A0A /* AddPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F780D31A0FBEBF00B90A0A /* AddPhotoViewController.m */; };
+		84F780D71A10071300B90A0A /* SingleCacheMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F780D61A10071300B90A0A /* SingleCacheMapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,8 @@
 		84F780D01A0FA0FE00B90A0A /* LongPressHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LongPressHomeViewController.m; sourceTree = "<group>"; };
 		84F780D21A0FBEBF00B90A0A /* AddPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPhotoViewController.h; sourceTree = "<group>"; };
 		84F780D31A0FBEBF00B90A0A /* AddPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPhotoViewController.m; sourceTree = "<group>"; };
+		84F780D51A10071300B90A0A /* SingleCacheMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleCacheMapViewController.h; sourceTree = "<group>"; };
+		84F780D61A10071300B90A0A /* SingleCacheMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleCacheMapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +318,8 @@
 		84EE3E2C1A0D293A0039FD9C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84F780D51A10071300B90A0A /* SingleCacheMapViewController.h */,
+				84F780D61A10071300B90A0A /* SingleCacheMapViewController.m */,
 				84F7807E1A0E4C9B00B90A0A /* NewCacheViewController.h */,
 				84F7807F1A0E4C9B00B90A0A /* NewCacheViewController.m */,
 				849D9C541A0A5B3F007CFD38 /* LoginViewController.h */,

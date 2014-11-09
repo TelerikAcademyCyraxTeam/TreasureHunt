@@ -7,6 +7,7 @@
 //
 
 #import "AddPhotoViewController.h"
+#import "NewCacheViewController.h"
 
 @interface AddPhotoViewController ()
 
@@ -34,5 +35,45 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)selectPhoto:(UIButton *)sender {
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.delegate = self;
+    imagePicker.allowsEditing = YES;
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+- (IBAction)takePhoto:(UIButton *)sender {
+    if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Device not found" message:@"Camera is not found!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    else{
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+        imagePicker.delegate = self;
+        imagePicker.allowsEditing = YES;
+        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    }
+
+}
+
+- (IBAction)back:(UIButton *)sender {
+
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    UIImage *selected = info[UIImagePickerControllerEditedImage];
+    self.photo.image = selected;
+    NewCacheViewController *parent = (NewCacheViewController *)[self presentingViewController];
+    parent.image = selected;
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
