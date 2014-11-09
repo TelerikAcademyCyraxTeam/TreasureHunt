@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SWTableViewCell.h"
+#import <Parse/Parse.h>
 
 @interface CacheListViewController : UIViewController<SWTableViewCellDelegate, UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic,strong) NSArray *caches;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
++ (PFObject *)getSelectedCache;
 @end
