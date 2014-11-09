@@ -13,11 +13,21 @@
 
 NSString *storeFilename = @"CDatabase.sqlite";
 
++ (id)getInstance {
+    NSLog(@"In getInstance");
+    static CodeDataHelper *getInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        getInstance = [[self alloc] init];
+    });
+    return getInstance;
+}
+
 - (id)init
 {
     NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     
-    self = [super init];
+    //self = [super init];
     
     if (!self) {
         return nil;

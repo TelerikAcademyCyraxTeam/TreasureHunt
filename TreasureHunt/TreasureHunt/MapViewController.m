@@ -64,7 +64,7 @@
     // coordinate -33.86,151.20 at zoom level 6.
     camera = [GMSCameraPosition cameraWithLatitude:_currentLocation.coordinate.latitude
                                          longitude:_currentLocation.coordinate.longitude
-                                              zoom:15];
+                                              zoom:10];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.delegate = self;
     mapView_.myLocationEnabled = YES;
@@ -79,17 +79,16 @@
     
 }
 -(void)setMarkers {
-    NSLog(@"Vleznah tuka!");
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Cache"];
     //NSSortDescriptor *sort =
     //[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
     //[request setSortDescriptors:[NSArray arrayWithObject:sort]];
-    
+    _cdHelper = [CodeDataHelper getInstance];
+    [_cdHelper setupCoreData];
     NSArray *fetchedObjects = [_cdHelper.context executeFetchRequest:request error:nil];
     
     
     for (Cache *cache in fetchedObjects) {
-        NSLog(@"I tuka vleznah!");
         // Creates a marker for every cache.
         CLLocationCoordinate2D coords = CLLocationCoordinate2DMake([cache.latitude doubleValue], [cache.longitude doubleValue]);
         GMSMarker *cacheMarker = [[GMSMarker alloc] init];
