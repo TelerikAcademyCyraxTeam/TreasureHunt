@@ -1,21 +1,22 @@
 //
-//  MapViewController.m
+//  SingleCacheMapViewController.m
 //  TreasureHunt
 //
-//  Created by Admin on 11/8/14.
+//  Created by Admin on 11/9/14.
 //  Copyright (c) 2014 Cyrax. All rights reserved.
 //
 
-#import "MapViewController.h"
+#import "SingleCacheMapViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import "Cache.h"
 #import "CodeDataHelper.h"
+#import "CacheListViewController.h"
 
-@interface MapViewController () <GMSMapViewDelegate>
-@property(nonatomic, strong) CodeDataHelper* cdHelper;
+@interface SingleCacheMapViewController ()
+
 @end
 
-@implementation MapViewController{
+@implementation SingleCacheMapViewController{
     CLLocationManager *manager;
     CLLocation *_currentLocation;
     GMSMapView *mapView_;
@@ -25,14 +26,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
     manager = [[CLLocationManager alloc] init];
     [manager requestWhenInUseAuthorization];
     [self getLocation];
     _isMapShowed = NO;
-    //[super viewDidLoad];
-    //GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.868 longitude:151.2086 zoom:6];
-    //self.view = [GMSMapView mapWithFrame:CGRectZero camera:camera];
 }
+
 
 -(void) getLocation {
     manager.delegate = self;
@@ -46,7 +47,7 @@
     _currentLocation = [locations lastObject];
     if(!_isMapShowed){
         [self createMap];
-        [self setMarkers];
+        [self setMarker];
         _isMapShowed = YES;
     }
     
@@ -78,30 +79,20 @@
     marker.map = mapView_;
     
 }
--(void)setMarkers {
-    NSLog(@"Vleznah tuka!");
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Cache"];
-    //NSSortDescriptor *sort =
-    //[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
-    //[request setSortDescriptors:[NSArray arrayWithObject:sort]];
+-(void)setMarker {
     
-    NSArray *fetchedObjects = [_cdHelper.context executeFetchRequest:request error:nil];
+    PFObject * selectedCache = [CacheListViewController getSelectedCache];
+    PFGeoPoint *currentCacheLocation = [selectedCache objectForKey:@"location"];
+    GMSMarker *cacheMarker = [[GMSMarker alloc] init];
     
-    
-    for (Cache *cache in fetchedObjects) {
-        NSLog(@"I tuka vleznah!");
-        // Creates a marker for every cache.
-        CLLocationCoordinate2D coords = CLLocationCoordinate2DMake([cache.latitude doubleValue], [cache.longitude doubleValue]);
-        GMSMarker *cacheMarker = [[GMSMarker alloc] init];
-        cacheMarker.position = coords;
-        cacheMarker.title = cache.name;
-        cacheMarker.snippet = [NSString stringWithFormat:@"By %@", cache.userCreated];
-        cacheMarker.appearAnimation = kGMSMarkerAnimationPop;
-        cacheMarker.icon = [UIImage imageNamed:@"blue_marker.png"];
-        cacheMarker.map = mapView_;
-        NSLog(@"%@", cache.name);
-    }
-    
+        // Creates a marker for the selected cache.
+    CLLocationCoordinate2D coords = CLLocationCoordinate2DMake(currentCacheLocation.latitude, currentCacheLocation.longitude);
+    cacheMarker.position = coords;
+    cacheMarker.title = [selectedCache objectForKey:@"name"];
+    cacheMarker.snippet = [NSString stringWithFormat:@"By %@", [selectedCache objectForKey:@"createdBy"]];
+    cacheMarker.appearAnimation = kGMSMarkerAnimationPop;
+    cacheMarker.icon = [UIImage imageNamed:@"blue_marker.png"];
+    cacheMarker.map = mapView_;
     
 }
 

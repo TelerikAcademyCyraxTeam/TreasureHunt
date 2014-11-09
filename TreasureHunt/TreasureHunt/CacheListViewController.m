@@ -8,21 +8,28 @@
 
 #import "CacheListViewController.h"
 #import "CacheCellTableViewCell.h"
-#import <Parse/Parse.h>
 #import "Toast.h"
 #import <UIKit/UIKit.h>
 #import "Cache.h"
 #import "CodeDataHelper.h"
+#import "SingleCacheMapViewController.h"
 
 @interface CacheListViewController ()
-   @property(nonatomic, strong) CodeDataHelper* cdHelper;
+
+@property(nonatomic, strong) CodeDataHelper* cdHelper;
 
 @end
+
+static PFObject * selectedCache;
 
 @implementation CacheListViewController{
     UILongPressGestureRecognizer *longPress;
     UIStoryboard *storyboard;
 
+}
+
++ (PFObject *) getSelectedCache{
+    return selectedCache;
 }
 
 - (void)viewDidLoad {
@@ -79,22 +86,23 @@
 }
 
 -(void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerLeftUtilityButtonWithIndex:(NSInteger)index{
+    
+    NSIndexPath *currentIndexPath = [self.tableView indexPathForCell:cell];
+    NSInteger currentCacheIndex = currentIndexPath.row;
+    selectedCache = [self.caches objectAtIndex:currentCacheIndex];
     switch (index) {
         case 0:{
             //google maps
-            NSIndexPath *currentIndexPath = [self.tableView indexPathForCell:cell];
-            NSInteger currentCacheIndex = currentIndexPath.row;
-            PFObject *selectedCache = [self.caches objectAtIndex:currentCacheIndex];
             //load map
-            
+            SingleCacheMapViewController *viewController = [[SingleCacheMapViewController alloc] init];
+            [self presentViewController:viewController animated:YES completion:nil];
+            //MapViewController *mapView = [_storyboard instantiateViewControllerWithIdentifier:@"map"];
+            //[self presentViewController:mapView animated:YES completion:nil];
+            break;
         }
         case 1:{
             _cdHelper = [[CodeDataHelper alloc] init];
             [_cdHelper setupCoreData];
-
-           NSIndexPath *currentIndexPath = [self.tableView indexPathForCell:cell];
-            NSInteger currentCacheIndex = currentIndexPath.row;
-            PFObject *selectedCache = [self.caches objectAtIndex:currentCacheIndex];
             NSString *currentCacheName = [selectedCache objectForKey:@"name"];
             //NSString *currentCacheTown = [selectedCache objectForKey:@"Town"];
             NSString *currentCacheDescription = [selectedCache objectForKey:@"casheDescrition"];
@@ -104,7 +112,8 @@
             NSNumber *currentCacheIsFound = [selectedCache objectForKey:@"isFound"];
             PFGeoPoint *currentCacheLocation = [selectedCache objectForKey:@"location"];
             NSString *currentCacheId = [selectedCache objectForKey:@"objectId"];
-            // extract the other properties and add new object to localDB
+            
+            //add new object to localDB
             Cache *currentCache = [NSEntityDescription insertNewObjectForEntityForName:@"Cache" inManagedObjectContext:_cdHelper.context];
             currentCache.name = currentCacheName;
             currentCache.cacheDescription = currentCacheDescription;
@@ -122,13 +131,28 @@
             
             [self.cdHelper saveContext];
             
+            //for test purposes
+            NSLog(@"%@", currentCache.name);
+            
+            NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Cache"];
+            //NSSortDescriptor *sort =
+            //[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+            //[request setSortDescriptors:[NSArray arrayWithObject:sort]];
+            
+            NSArray *fetchedObjects = [_cdHelper.context executeFetchRequest:request error:nil];
+            
+            for (Cache *cache in fetchedObjects) {
+                NSLog(@"%@", cache.name);
+            }
+            
             [self.view makeToast:@"Added to favourites"];
+            
+            break;
         }
         default:
             break;
     }
 }
-
 
 /*
 #pragma mark - Navigation

@@ -64,8 +64,8 @@
 }
 
 - (IBAction)loadMap:(UIButton *)sender {
-    MapViewController *newCacheView = [_storyboard instantiateViewControllerWithIdentifier:@"map"];
-    [self presentViewController:newCacheView animated:YES completion:nil];
+    MapViewController *mapView = [_storyboard instantiateViewControllerWithIdentifier:@"map"];
+    [self presentViewController:mapView animated:YES completion:nil];
 
 }
 @end
