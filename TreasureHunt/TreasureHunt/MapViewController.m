@@ -8,8 +8,11 @@
 
 #import "MapViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "Cache.h"
+#import "CodeDataHelper.h"
 
 @interface MapViewController () <GMSMapViewDelegate>
+@property(nonatomic, strong) CodeDataHelper* cdHelper;
 @end
 
 @implementation MapViewController{
@@ -43,6 +46,7 @@
     _currentLocation = [locations lastObject];
     if(!_isMapShowed){
         [self createMap];
+        [self setMarkers];
         _isMapShowed = YES;
     }
     
@@ -72,6 +76,28 @@
     marker.title = @"You are here!";
     //marker.snippet = @"Australia";
     marker.map = mapView_;
+    
+}
+-(void)setMarkers {
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Cache"];
+    //NSSortDescriptor *sort =
+    //[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+    //[request setSortDescriptors:[NSArray arrayWithObject:sort]];
+    
+    NSArray *fetchedObjects = [_cdHelper.context executeFetchRequest:request error:nil];
+    
+    GMSMarker *marker = [[GMSMarker alloc] init];
+    
+    for (Cache *cache in fetchedObjects) {
+        // Creates a marker in the center of the map.
+        CLLocationCoordinate2D coords = CLLocationCoordinate2DMake([cache.latitude doubleValue], [cache.longitude doubleValue]);
+        marker.position = coords;
+        marker.title = cache.name;
+        marker.snippet = [NSString stringWithFormat:@"By %@", cache.userCreated];
+        marker.map = mapView_;
+    }
+    
     
 }
 

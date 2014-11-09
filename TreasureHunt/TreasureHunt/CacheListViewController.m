@@ -82,6 +82,11 @@
     switch (index) {
         case 0:{
             //google maps
+            NSIndexPath *currentIndexPath = [self.tableView indexPathForCell:cell];
+            NSInteger currentCacheIndex = currentIndexPath.row;
+            PFObject *selectedCache = [self.caches objectAtIndex:currentCacheIndex];
+            //load map
+            
         }
         case 1:{
             _cdHelper = [[CodeDataHelper alloc] init];
@@ -91,7 +96,7 @@
             NSInteger currentCacheIndex = currentIndexPath.row;
             PFObject *selectedCache = [self.caches objectAtIndex:currentCacheIndex];
             NSString *currentCacheName = [selectedCache objectForKey:@"name"];
-            NSString *currentCacheTown = [selectedCache objectForKey:@"Town"];
+            //NSString *currentCacheTown = [selectedCache objectForKey:@"Town"];
             NSString *currentCacheDescription = [selectedCache objectForKey:@"casheDescrition"];
             NSString *currentCacheHint = [selectedCache objectForKey:@"hint"];
             NSString *currentCacheCreatedBy = [selectedCache objectForKey:@"createdBy"];
