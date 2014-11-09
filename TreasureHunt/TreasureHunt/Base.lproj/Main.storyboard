@@ -580,6 +580,9 @@
                                 <state key="normal" title="Take Photo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="CTq-hL-gm8" eventType="touchUpInside" id="YKI-Fz-4J0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rro-7I-l4U">
                                 <rect key="frame" x="429" y="550" width="108" height="30"/>
@@ -589,6 +592,9 @@
                                 <state key="normal" title="Select Photo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectPhoto:" destination="CTq-hL-gm8" eventType="touchUpInside" id="sV0-yZ-buv"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9cB-Ew-mNg">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="529"/>
@@ -596,6 +602,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="photo" destination="9cB-Ew-mNg" id="2Yf-iG-FRR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1qs-lB-wCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
