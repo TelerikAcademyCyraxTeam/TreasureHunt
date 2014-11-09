@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%@", [[NSBundle mainBundle] bundleIdentifier]);
     _storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"homeBackground.png"]];
 }

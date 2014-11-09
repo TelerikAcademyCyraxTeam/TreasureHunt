@@ -11,10 +11,11 @@
 #import <Parse/Parse.h>
 #import "Toast.h"
 #import <UIKit/UIKit.h>
+#import "Cache.h"
+#import "CodeDataHelper.h"
 
-@interface CacheListViewController (){
-   
-}
+@interface CacheListViewController ()
+   @property(nonatomic, strong) CodeDataHelper* cdHelper;
 
 @end
 
@@ -75,13 +76,38 @@
             //google maps
         }
         case 1:{
+            _cdHelper = [[CodeDataHelper alloc] init];
+            [_cdHelper setupCoreData];
 
            NSIndexPath *currentIndexPath = [self.tableView indexPathForCell:cell];
             NSInteger currentCacheIndex = currentIndexPath.row;
             PFObject *selectedCache = [self.caches objectAtIndex:currentCacheIndex];
             NSString *currentCacheName = [selectedCache objectForKey:@"name"];
             NSString *currentCacheTown = [selectedCache objectForKey:@"Town"];
+            NSString *currentCacheDescription = [selectedCache objectForKey:@"casheDescrition"];
+            NSString *currentCacheHint = [selectedCache objectForKey:@"hint"];
+            NSString *currentCacheCreatedBy = [selectedCache objectForKey:@"createdBy"];
+            NSString *currentCacheFoundBy = [selectedCache objectForKey:@"userFound"];
+            NSNumber *currentCacheIsFound = [selectedCache objectForKey:@"isFound"];
+            PFGeoPoint *currentCacheLocation = [selectedCache objectForKey:@"location"];
+            NSString *currentCacheId = [selectedCache objectForKey:@"objectId"];
             // extract the other properties and add new object to localDB
+            Cache *currentCache = [NSEntityDescription insertNewObjectForEntityForName:@"Cache" inManagedObjectContext:_cdHelper.context];
+            currentCache.name = currentCacheName;
+            currentCache.cacheDescription = currentCacheDescription;
+            currentCache.hint = currentCacheHint;
+            currentCache.userCreated = currentCacheCreatedBy;
+            if (!currentCacheFoundBy) {
+                currentCache.userFoundIt = currentCacheFoundBy;
+            }
+            currentCache.isFound = currentCacheIsFound;
+            currentCache.latitude = [NSNumber numberWithDouble: currentCacheLocation.latitude];
+            currentCache.longitude = [NSNumber numberWithDouble: currentCacheLocation.longitude];
+            currentCache.cacheId = currentCacheId;
+            
+            [_cdHelper.context insertObject:currentCache];
+            
+            [self.cdHelper saveContext];
             
             [self.view makeToast:@"Added to favourites"];
         }

@@ -25,7 +25,7 @@
                   clientKey:@"QWj1wZCFrY1P3eonq8ZpbXiMUggXei2jYCCWkz6U"];
     //[PFUser logOut];
     
-    [GMSServices provideAPIKey:@"AIzaSyAf4gnOc6PHK2JRvmYKRzlXmeskLLXY4lY"];
+    [GMSServices provideAPIKey:@"AIzaSyCeXMDflh9D_jqui_E-499OS6V_jUcNhLs"];
     
     PFUser *currentUser = [PFUser currentUser];
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];

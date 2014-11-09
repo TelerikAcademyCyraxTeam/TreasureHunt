@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		84031B601A0A508E00BDDE91 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84031B5D1A0A508E00BDDE91 /* Bolts.framework */; };
 		84031B611A0A508E00BDDE91 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84031B5E1A0A508E00BDDE91 /* Parse.framework */; };
-		84031B621A0A508E00BDDE91 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84031B5F1A0A508E00BDDE91 /* ParseFacebookUtils.framework */; };
 		8460CACD1A066AD10036BCB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8460CACC1A066AD10036BCB3 /* main.m */; };
 		8460CAD01A066AD10036BCB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8460CACF1A066AD10036BCB3 /* AppDelegate.m */; };
 		8460CAD61A066AD10036BCB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8460CAD41A066AD10036BCB3 /* Main.storyboard */; };
@@ -179,7 +178,6 @@
 				8460CB171A0954670036BCB3 /* MobileCoreServices.framework in Frameworks */,
 				84031B601A0A508E00BDDE91 /* Bolts.framework in Frameworks */,
 				84031B611A0A508E00BDDE91 /* Parse.framework in Frameworks */,
-				84031B621A0A508E00BDDE91 /* ParseFacebookUtils.framework in Frameworks */,
 				8460CB111A0954320036BCB3 /* CoreGraphics.framework in Frameworks */,
 				8460CB0F1A09541E0036BCB3 /* CFNetwork.framework in Frameworks */,
 				8460CB0D1A0954110036BCB3 /* AudioToolbox.framework in Frameworks */,
@@ -566,8 +564,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LIBTOOLFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -603,8 +601,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LIBTOOLFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -623,7 +621,7 @@
 				);
 				INFOPLIST_FILE = TreasureHunt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC\n";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -640,7 +638,7 @@
 				);
 				INFOPLIST_FILE = TreasureHunt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC\n";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
