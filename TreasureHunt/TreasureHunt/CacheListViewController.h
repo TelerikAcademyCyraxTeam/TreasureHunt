@@ -11,5 +11,6 @@
 
 @interface CacheListViewController : UIViewController<SWTableViewCellDelegate, UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic,strong) NSArray *caches;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

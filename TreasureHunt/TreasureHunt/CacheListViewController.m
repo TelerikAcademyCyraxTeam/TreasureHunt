@@ -9,6 +9,7 @@
 #import "CacheListViewController.h"
 #import "CacheCellTableViewCell.h"
 #import <Parse/Parse.h>
+#import "Toast.h"
 #import <UIKit/UIKit.h>
 
 @interface CacheListViewController (){
@@ -18,6 +19,7 @@
 @end
 
 @implementation CacheListViewController{
+
 
 }
 
@@ -62,8 +64,30 @@
 
 }
 
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [self.caches count];
+}
+
+-(void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerLeftUtilityButtonWithIndex:(NSInteger)index{
+    switch (index) {
+        case 0:{
+            //google maps
+        }
+        case 1:{
+
+           NSIndexPath *currentIndexPath = [self.tableView indexPathForCell:cell];
+            NSInteger currentCacheIndex = currentIndexPath.row;
+            PFObject *selectedCache = [self.caches objectAtIndex:currentCacheIndex];
+            NSString *currentCacheName = [selectedCache objectForKey:@"name"];
+            NSString *currentCacheTown = [selectedCache objectForKey:@"Town"];
+            // extract the other properties and add new object to localDB
+            
+            [self.view makeToast:@"Added to favourites"];
+        }
+        default:
+            break;
+    }
 }
 
 

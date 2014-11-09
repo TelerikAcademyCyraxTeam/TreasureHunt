@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     manager = [[CLLocationManager alloc] init];
     manager.delegate = self;
     manager.distanceFilter = kCLDistanceFilterNone;
@@ -41,25 +42,6 @@
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
     currentLocation = [locations lastObject];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)createCache:(UIButton *)sender {
-    [self getLocation];
     NSString *name = self.name.text;
     NSString *location = self.locatedIn.text;
     NSString *cacheDescription = self.cacheDescription.text;
@@ -83,5 +65,25 @@
             [alert show];
         }
     }];
+
 }
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+- (IBAction)createCache:(UIButton *)sender {
+    [self getLocation];
+    }
 @end

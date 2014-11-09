@@ -10,17 +10,19 @@
 #import <Parse/Parse.h>
 #import "CacheListViewController.h"
 #import "NewCacheViewController.h"
+#import "MapViewController.h"
 
 @interface HomeViewController ()
 
 @end
 
-@implementation HomeViewController
+@implementation HomeViewController{
+    UIStoryboard *_storyboard;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
+    _storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"homeBackground.png"]];
 }
 
@@ -40,8 +42,7 @@
 */
 
 - (IBAction)listCaches:(UIButton *)sender {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        CacheListViewController *cachesList = [storyboard instantiateViewControllerWithIdentifier:@"cachesList"];
+        CacheListViewController *cachesList = [_storyboard instantiateViewControllerWithIdentifier:@"cachesList"];
         PFQuery *query = [PFQuery queryWithClassName:@"Cash"];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if(!error){
@@ -57,8 +58,13 @@
 }
 
 - (IBAction)addCache:(UIButton *)sender {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    NewCacheViewController *newCacheView = [storyboard instantiateViewControllerWithIdentifier:@"newCache"];
+    NewCacheViewController *newCacheView = [_storyboard instantiateViewControllerWithIdentifier:@"newCache"];
     [self presentViewController:newCacheView animated:YES completion:nil];
+}
+
+- (IBAction)loadMap:(UIButton *)sender {
+    MapViewController *newCacheView = [_storyboard instantiateViewControllerWithIdentifier:@"map"];
+    [self presentViewController:newCacheView animated:YES completion:nil];
+
 }
 @end
