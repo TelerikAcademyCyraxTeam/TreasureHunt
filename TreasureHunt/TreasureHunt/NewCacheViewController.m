@@ -77,18 +77,28 @@
 */
 
 - (IBAction)createCache:(UIButton *)sender {
+
     NSString *name = self.name.text;
     NSString *location = self.locatedIn.text;
     NSString *cacheDescription = self.cacheDescription.text;
     NSString *cacheHints = self.hints.text;
     PFObject *cache = [[PFObject alloc] initWithClassName:@"Cash"];
     PFUser *currentUser = [PFUser currentUser];
+    
+    NSData *photo = UIImagePNGRepresentation(self.image);
+    PFFile *photoAsFile = [PFFile fileWithName:name data:photo];
+    PFObject *cachePhoto = [PFObject objectWithClassName:@"Photo"];
+    cachePhoto[@"imageName"] = name;
+    cachePhoto[@"imageFile"] = photoAsFile;
+    [cachePhoto saveInBackground];
+    
     cache[@"name"] = name;
     cache[@"Town"] = location;
     cache[@"cashDescription"] = cacheDescription;
     cache[@"hint"] = cacheHints;
     cache[@"isFound"] = [NSNumber numberWithBool:NO];
     cache[@"createdBy"] = currentUser.username;
+    cache[@"photo"] = name;
     PFGeoPoint *cacheLocation = [PFGeoPoint geoPointWithLatitude:currentLocation.coordinate.latitude longitude:currentLocation.coordinate.longitude];
     cache[@"location"] = cacheLocation;
     [cache saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
