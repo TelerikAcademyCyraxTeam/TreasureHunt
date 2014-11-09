@@ -12,10 +12,10 @@
 @interface NewCacheViewController : UIViewController<CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *name;
 @property (weak, nonatomic) IBOutlet UITextField *locatedIn;
-@property (weak, nonatomic) IBOutlet UITextView *cacheDescription;
-@property (weak, nonatomic) IBOutlet UITextView *hints;
 @property(nonatomic, strong) UIImage *image;
 - (IBAction)createCache:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UITextView *cacheDescription;
+@property (weak, nonatomic) IBOutlet UITextView *hints;
 
 
 
