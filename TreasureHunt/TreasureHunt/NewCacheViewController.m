@@ -25,9 +25,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"homeBackground.png"]];
     manager = [[CLLocationManager alloc] init];
     [manager requestWhenInUseAuthorization];
-       [self getLocation];
+    [self getLocation];
     _storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     _longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(loadNextView)];
     _longPress.minimumPressDuration = 1.0f;
