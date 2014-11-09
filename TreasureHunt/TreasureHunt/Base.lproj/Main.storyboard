@@ -160,6 +160,59 @@
             </objects>
             <point key="canvasLocation" x="25" y="-107"/>
         </scene>
+        <!--Long Press Home View Controller-->
+        <scene sceneID="svt-sc-wZL">
+            <objects>
+                <viewController storyboardIdentifier="longPressHome" modalTransitionStyle="flipHorizontal" id="iYT-gv-rGz" customClass="LongPressHomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wI5-Hl-lFB"/>
+                        <viewControllerLayoutGuide type="bottom" id="ap0-EY-dqX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TFf-UJ-vgD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nb6-zU-uPO">
+                                <rect key="frame" x="255" y="336" width="73" height="74"/>
+                                <state key="normal" backgroundImage="treasure_chest_add.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCache:" destination="iYT-gv-rGz" eventType="touchUpInside" id="Lzw-TA-ZQu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKb-JN-50P">
+                                <rect key="frame" x="130" y="262" width="73" height="74"/>
+                                <state key="normal" backgroundImage="treasure_chest.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="listCaches:" destination="iYT-gv-rGz" eventType="touchUpInside" id="5tC-Wr-cRL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H12-bf-9UW">
+                                <rect key="frame" x="112" y="366" width="80" height="83"/>
+                                <state key="normal" backgroundImage="treasure-map-icon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadMap:" destination="iYT-gv-rGz" eventType="touchUpInside" id="JvM-2a-oCX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LS-tf-KJy">
+                                <rect key="frame" x="331" y="253" width="73" height="74"/>
+                                <state key="normal" backgroundImage="treasure_chest_diskette.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MWF-Oa-Pyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1508" y="-729"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="mgq-Xg-ubf">
             <objects>
@@ -181,12 +234,6 @@
                                     <action selector="addCache:" destination="mPt-P3-suR" eventType="touchUpInside" id="g7J-jb-8fi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rY1-T0-jrJ">
-                                <rect key="frame" x="235" y="307" width="95" height="103"/>
-                                <state key="normal" backgroundImage="treasure_chest_diskette.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8C-WZ-OxA">
                                 <rect key="frame" x="235" y="196" width="95" height="103"/>
                                 <state key="normal" backgroundImage="treasure_chest.png">
@@ -204,6 +251,12 @@
                                 <connections>
                                     <action selector="loadMap:" destination="mPt-P3-suR" eventType="touchUpInside" id="L2r-zI-emh"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rY1-T0-jrJ">
+                                <rect key="frame" x="235" y="307" width="95" height="103"/>
+                                <state key="normal" backgroundImage="treasure_chest_diskette.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

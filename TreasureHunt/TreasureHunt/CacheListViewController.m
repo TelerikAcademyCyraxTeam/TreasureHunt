@@ -19,16 +19,18 @@
 @end
 
 @implementation CacheListViewController{
+    UILongPressGestureRecognizer *longPress;
+    UIStoryboard *storyboard;
 
-
-}
-
--(void)viewWillAppear:(BOOL)animated{
-  
 }
 
 - (void)viewDidLoad {
      [super viewDidLoad];
+    storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(loadNextView)];
+    longPress.minimumPressDuration = 1.0f;
+    longPress.allowableMovement = 100.0f;
+    [self.view addGestureRecognizer:longPress];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"homeBackground.png"]];
 }
@@ -36,6 +38,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)loadNextView{
+    UIViewController *next = [storyboard instantiateViewControllerWithIdentifier:@"longPressHome"];
+    [self presentViewController:next animated:YES completion:nil];
+    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

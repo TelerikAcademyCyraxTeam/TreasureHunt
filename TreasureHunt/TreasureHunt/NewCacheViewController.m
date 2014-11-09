@@ -10,26 +10,41 @@
 #import <Parse/Parse.h>
 #import "Toast.h"
 
-@interface NewCacheViewController ()
+@interface NewCacheViewController (){
+    
+}
 
 @end
 
 @implementation NewCacheViewController{
     CLLocationManager *manager;
     CLLocation *currentLocation;
+    UILongPressGestureRecognizer *_longPress;
+    UIStoryboard *_storyboard;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     manager = [[CLLocationManager alloc] init];
-    manager.delegate = self;
-    manager.distanceFilter = kCLDistanceFilterNone;
-    manager.desiredAccuracy = kCLLocationAccuracyBest;
-    // Do any additional setup after loading the view.
+    [manager requestWhenInUseAuthorization];
+       [self getLocation];
+    _storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    _longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(loadNextView)];
+    _longPress.minimumPressDuration = 1.0f;
+    _longPress.allowableMovement = 100.0f;
+    [self.view addGestureRecognizer:_longPress];
+}
+
+-(void)loadNextView{
+    UIViewController *next = [_storyboard instantiateViewControllerWithIdentifier:@"longPressHome"];
+    [self presentViewController:next animated:YES completion:nil];
+    
 }
 
 -(void) getLocation{
+    manager.delegate = self;
+    manager.distanceFilter = 20;
+    manager.desiredAccuracy = kCLLocationAccuracyBest;
     [manager startUpdatingLocation];
 }
 
@@ -42,6 +57,25 @@
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
     currentLocation = [locations lastObject];
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+- (IBAction)createCache:(UIButton *)sender {
     NSString *name = self.name.text;
     NSString *location = self.locatedIn.text;
     NSString *cacheDescription = self.cacheDescription.text;
@@ -66,24 +100,5 @@
         }
     }];
 
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)createCache:(UIButton *)sender {
-    [self getLocation];
     }
 @end
