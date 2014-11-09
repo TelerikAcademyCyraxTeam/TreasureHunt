@@ -39,6 +39,8 @@
 		84A28A021A0E7D1F00C9DD6F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A28A011A0E7D1F00C9DD6F /* libz.dylib */; };
 		84A28A041A0E7D3000C9DD6F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A28A031A0E7D3000C9DD6F /* OpenGLES.framework */; };
 		84A28A071A0E8B7E00C9DD6F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A28A061A0E8B7E00C9DD6F /* MapViewController.m */; };
+		84A395EA1A0FEE980071DEB0 /* SingleCacheMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A395E91A0FEE980071DEB0 /* SingleCacheMapViewController.m */; };
+		84A395EE1A0FF8DB0071DEB0 /* blue_marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A395ED1A0FF8DB0071DEB0 /* blue_marker.png */; };
 		84A70B821A0D120D00EDF4CB /* Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A70B811A0D120D00EDF4CB /* Cache.m */; };
 		84A7ADCD1A0CBC6B005A5E96 /* CodeDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A7ADCC1A0CBC6B005A5E96 /* CodeDataHelper.m */; };
 		84A7ADCF1A0CD77B005A5E96 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A7ADCE1A0CD77B005A5E96 /* CoreData.framework */; };
@@ -120,6 +122,9 @@
 		84A28A031A0E7D3000C9DD6F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		84A28A051A0E8B7D00C9DD6F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		84A28A061A0E8B7E00C9DD6F /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		84A395E81A0FEE980071DEB0 /* SingleCacheMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleCacheMapViewController.h; sourceTree = "<group>"; };
+		84A395E91A0FEE980071DEB0 /* SingleCacheMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleCacheMapViewController.m; sourceTree = "<group>"; };
+		84A395ED1A0FF8DB0071DEB0 /* blue_marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue_marker.png; path = ../../../blue_marker.png; sourceTree = "<group>"; };
 		84A70B801A0D120D00EDF4CB /* Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cache.h; sourceTree = "<group>"; };
 		84A70B811A0D120D00EDF4CB /* Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cache.m; sourceTree = "<group>"; };
 		84A7ADCB1A0CBC6B005A5E96 /* CodeDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeDataHelper.h; sourceTree = "<group>"; };
@@ -333,6 +338,8 @@
 				84F780D01A0FA0FE00B90A0A /* LongPressHomeViewController.m */,
 				84F780D21A0FBEBF00B90A0A /* AddPhotoViewController.h */,
 				84F780D31A0FBEBF00B90A0A /* AddPhotoViewController.m */,
+				84A395E81A0FEE980071DEB0 /* SingleCacheMapViewController.h */,
+				84A395E91A0FEE980071DEB0 /* SingleCacheMapViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -359,6 +366,7 @@
 		84F7807B1A0E4AFA00B90A0A /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				84A395ED1A0FF8DB0071DEB0 /* blue_marker.png */,
 				84F780831A0E656200B90A0A /* treasure_map_min.png */,
 				84F780811A0E63DC00B90A0A /* treasure_chest_diskette_min.png */,
 				84F780731A0E4A7E00B90A0A /* treasure-map-icon.png */,
@@ -455,6 +463,7 @@
 				84F780751A0E4A7E00B90A0A /* homeBackground.png in Resources */,
 				84F780821A0E63DC00B90A0A /* treasure_chest_diskette_min.png in Resources */,
 				84F780841A0E656200B90A0A /* treasure_map_min.png in Resources */,
+				84A395EE1A0FF8DB0071DEB0 /* blue_marker.png in Resources */,
 				84F780791A0E4A7E00B90A0A /* treasure_chest.png in Resources */,
 				8460CAD61A066AD10036BCB3 /* Main.storyboard in Resources */,
 				84F780741A0E4A7E00B90A0A /* background.jpg in Resources */,
@@ -502,7 +511,7 @@
 				849D9C5C1A0A791E007CFD38 /* HomeViewController.m in Sources */,
 				84A28A071A0E8B7E00C9DD6F /* MapViewController.m in Sources */,
 				84A7ADCD1A0CBC6B005A5E96 /* CodeDataHelper.m in Sources */,
-				84F780D71A10071300B90A0A /* SingleCacheMapViewController.m in Sources */,
+				84A395EA1A0FEE980071DEB0 /* SingleCacheMapViewController.m in Sources */,
 				849D9C591A0A69DF007CFD38 /* RegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
