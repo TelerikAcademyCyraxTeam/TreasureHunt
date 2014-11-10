@@ -39,8 +39,13 @@
             for(PFObject *file in objects){
                 if([file objectForKey:@"imageName"] != [self.currentCache objectForKey:@"photo"]){
                     PFFile *data =[file objectForKey:@"imageFile"];
-                   // image = [UIImage imageWithData:[file objectForKey:@"imageFile"]];
-                    NSLog(@"%@",image);
+                    [data getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+                        if (!error) {
+                            UIImage *image = [UIImage imageWithData:imageData];
+                            NSLog(@"%@",image);
+                        }
+                    }];
+                    
                     break;
                 }
             }
