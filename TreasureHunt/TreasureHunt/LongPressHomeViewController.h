@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface LongPressHomeViewController : UIViewController
-- (IBAction)loadMap:(UIButton *)sender;
-- (IBAction)listCaches:(UIButton *)sender;
 - (IBAction)addCache:(UIButton *)sender;
-- (IBAction)listFavourites:(id)sender;
+- (IBAction)listCaches:(UIButton *)sender;
+- (IBAction)listFavourites:(UIButton *)sender;
+- (IBAction)loadMap:(UIButton *)sender;
 
 @end

@@ -30,6 +30,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)dismissRegister:(UIButton *)sender{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 -(void) registerUserWithName:(NSString *) name
                  andPassword:(NSString *) password
                     andemail:(NSString *) email{

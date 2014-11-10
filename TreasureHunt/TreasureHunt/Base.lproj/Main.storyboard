@@ -19,34 +19,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ooU-yZ-hq6">
-                                <rect key="frame" x="62" y="193" width="228" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ooU-yZ-hq6">
+                                <rect key="frame" x="186" y="208" width="228" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="228" id="pDo-g2-AIX"/>
+                                    <constraint firstAttribute="height" constant="30" id="vlv-ck-uzQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kpK-Xq-QcM">
-                                <rect key="frame" x="62" y="252" width="228" height="32"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kpK-Xq-QcM">
+                                <rect key="frame" x="186" y="275" width="228" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fkR-ef-P59"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKc-cc-qRO">
-                                <rect key="frame" x="62" y="397" width="228" height="30"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKc-cc-qRO">
+                                <rect key="frame" x="186" y="373" width="228" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0uT-Jn-zqT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
                                 <state key="normal" title="Register now!">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="Ngh-g5-pWl" kind="show" id="5xx-90-eAp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gu-CU-85e">
-                                <rect key="frame" x="89" y="315" width="175" height="39"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gu-CU-85e">
+                                <rect key="frame" x="213" y="326" width="175" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="6iX-Yd-pPg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.82352948189999997" green="0.77647066119999997" blue="0.62352943419999995" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -55,6 +67,19 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kpK-Xq-QcM" firstAttribute="leading" secondItem="ooU-yZ-hq6" secondAttribute="leading" id="0Wk-aH-V3h"/>
+                            <constraint firstItem="kpK-Xq-QcM" firstAttribute="trailing" secondItem="ooU-yZ-hq6" secondAttribute="trailing" id="1Ra-sz-pZh"/>
+                            <constraint firstItem="8Gu-CU-85e" firstAttribute="top" secondItem="kpK-Xq-QcM" secondAttribute="bottom" constant="21" id="3yK-ui-6sW"/>
+                            <constraint firstItem="kpK-Xq-QcM" firstAttribute="leading" secondItem="LKc-cc-qRO" secondAttribute="leading" id="AiX-Eg-b2D"/>
+                            <constraint firstItem="kpK-Xq-QcM" firstAttribute="top" secondItem="ooU-yZ-hq6" secondAttribute="bottom" constant="37" id="GHt-J0-dQA"/>
+                            <constraint firstItem="LKc-cc-qRO" firstAttribute="centerX" secondItem="8Gu-CU-85e" secondAttribute="centerX" id="Iyq-cP-OgI"/>
+                            <constraint firstItem="LKc-cc-qRO" firstAttribute="top" secondItem="8Gu-CU-85e" secondAttribute="bottom" constant="8" symbolic="YES" id="Kfg-pv-1qg"/>
+                            <constraint firstItem="LKc-cc-qRO" firstAttribute="trailing" secondItem="kpK-Xq-QcM" secondAttribute="trailing" id="qhG-z7-uE0"/>
+                            <constraint firstItem="8Gu-CU-85e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="skU-zP-QtP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LKc-cc-qRO" secondAttribute="bottom" constant="197" id="vMF-2Z-vpN"/>
+                            <constraint firstItem="ooU-yZ-hq6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="188" id="w4q-OY-1G3"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="password" destination="kpK-Xq-QcM" id="KDf-DM-U0Q"/>
@@ -396,47 +421,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVj-Bw-HId">
-                                <rect key="frame" x="76" y="338" width="95" height="103"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Treasure-Hunts-Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BuG-M4-wvF">
+                                <rect key="frame" x="180" y="58" width="240" height="181"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="18v-mB-mdu"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN9-xR-iyg">
+                                <rect key="frame" x="180" y="276" width="65" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="Qsz-L3-D8P"/>
+                                    <constraint firstAttribute="width" constant="65" id="nGC-FT-8SM"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="treasure_chest_add.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="addCache:" destination="iYT-gv-rGz" eventType="touchUpInside" id="Hyx-iW-RKh"/>
+                                    <action selector="addCache:" destination="iYT-gv-rGz" eventType="touchUpInside" id="SSG-ZG-Qqr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdB-sV-djH">
-                                <rect key="frame" x="188" y="237" width="95" height="103"/>
-                                <state key="normal" backgroundImage="treasure_chest.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="listCaches:" destination="iYT-gv-rGz" eventType="touchUpInside" id="58K-p8-Ob3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Roz-jx-oa7">
-                                <rect key="frame" x="188" y="338" width="95" height="103"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ug4-e4-Qjo">
+                                <rect key="frame" x="355" y="276" width="65" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="h4S-6p-4Xb"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="treasure_chest_diskette.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="listFavourites:" destination="iYT-gv-rGz" eventType="touchUpInside" id="4ZW-gN-zjI"/>
+                                    <action selector="listFavourites:" destination="iYT-gv-rGz" eventType="touchUpInside" id="Y8P-px-fOt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPU-PP-WFx">
-                                <rect key="frame" x="76" y="237" width="95" height="103"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mng-4Y-va7">
+                                <rect key="frame" x="268" y="276" width="65" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="xia-ef-aNl"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="treasure_chest.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="listCaches:" destination="iYT-gv-rGz" eventType="touchUpInside" id="X8n-jR-zn4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIJ-O7-D28">
+                                <rect key="frame" x="268" y="331" width="65" height="64"/>
                                 <state key="normal" backgroundImage="treasure-map-icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="loadMap:" destination="iYT-gv-rGz" eventType="touchUpInside" id="och-Yy-goD"/>
+                                    <action selector="loadMap:" destination="iYT-gv-rGz" eventType="touchUpInside" id="UPF-rL-73d"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Treasure-Hunts-Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uvb-CP-N0C">
-                                <rect key="frame" x="43" y="79" width="240" height="131"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BuG-M4-wvF" firstAttribute="top" secondItem="wI5-Hl-lFB" secondAttribute="bottom" constant="38" id="42Z-rZ-ibX"/>
+                            <constraint firstItem="pIJ-O7-D28" firstAttribute="centerX" secondItem="BuG-M4-wvF" secondAttribute="centerX" id="4w2-3I-gj0"/>
+                            <constraint firstItem="Ug4-e4-Qjo" firstAttribute="leading" secondItem="pIJ-O7-D28" secondAttribute="trailing" constant="22" id="8yw-Ix-fnc"/>
+                            <constraint firstItem="pIJ-O7-D28" firstAttribute="leading" secondItem="Mng-4Y-va7" secondAttribute="leading" id="H4D-WN-3Nv"/>
+                            <constraint firstItem="pIJ-O7-D28" firstAttribute="trailing" secondItem="Mng-4Y-va7" secondAttribute="trailing" id="KA6-4Y-PT8"/>
+                            <constraint firstItem="EN9-xR-iyg" firstAttribute="top" secondItem="BuG-M4-wvF" secondAttribute="bottom" constant="37" id="KWj-d3-pnA"/>
+                            <constraint firstItem="BuG-M4-wvF" firstAttribute="centerX" secondItem="TFf-UJ-vgD" secondAttribute="centerX" id="LhY-YX-Hu1"/>
+                            <constraint firstItem="Ug4-e4-Qjo" firstAttribute="trailing" secondItem="BuG-M4-wvF" secondAttribute="trailing" id="RJT-YR-CQQ"/>
+                            <constraint firstItem="EN9-xR-iyg" firstAttribute="top" secondItem="TFf-UJ-vgD" secondAttribute="top" constant="276" id="TBC-cz-OFj"/>
+                            <constraint firstItem="Mng-4Y-va7" firstAttribute="firstBaseline" secondItem="Ug4-e4-Qjo" secondAttribute="firstBaseline" id="XvT-na-6IY"/>
+                            <constraint firstItem="Ug4-e4-Qjo" firstAttribute="top" secondItem="EN9-xR-iyg" secondAttribute="top" id="ZJ9-KV-ytx"/>
+                            <constraint firstItem="EN9-xR-iyg" firstAttribute="leading" secondItem="BuG-M4-wvF" secondAttribute="leading" id="dhx-M5-aDf"/>
+                            <constraint firstItem="Ug4-e4-Qjo" firstAttribute="firstBaseline" secondItem="EN9-xR-iyg" secondAttribute="firstBaseline" id="eUt-ax-0qO"/>
+                            <constraint firstItem="Mng-4Y-va7" firstAttribute="bottom" secondItem="Ug4-e4-Qjo" secondAttribute="bottom" id="fJg-Fk-BSi"/>
+                            <constraint firstItem="Mng-4Y-va7" firstAttribute="baseline" secondItem="Ug4-e4-Qjo" secondAttribute="baseline" id="fr8-hb-hlU"/>
+                            <constraint firstItem="ap0-EY-dqX" firstAttribute="top" secondItem="pIJ-O7-D28" secondAttribute="bottom" constant="205" id="gBB-7n-NUl"/>
+                            <constraint firstItem="Mng-4Y-va7" firstAttribute="top" secondItem="Ug4-e4-Qjo" secondAttribute="top" id="ljj-TW-xoN"/>
+                            <constraint firstItem="pIJ-O7-D28" firstAttribute="top" secondItem="BuG-M4-wvF" secondAttribute="bottom" constant="92" id="lsm-xh-7qi"/>
+                            <constraint firstItem="Mng-4Y-va7" firstAttribute="baseline" secondItem="EN9-xR-iyg" secondAttribute="baseline" id="m8j-Tb-eEA"/>
+                            <constraint firstItem="Mng-4Y-va7" firstAttribute="bottom" secondItem="EN9-xR-iyg" secondAttribute="bottom" id="o68-2a-F51"/>
+                            <constraint firstItem="Mng-4Y-va7" firstAttribute="firstBaseline" secondItem="EN9-xR-iyg" secondAttribute="firstBaseline" id="sAg-Jh-0gS"/>
+                            <constraint firstItem="Ug4-e4-Qjo" firstAttribute="bottom" secondItem="EN9-xR-iyg" secondAttribute="bottom" id="tF6-La-F1t"/>
+                            <constraint firstItem="Ug4-e4-Qjo" firstAttribute="baseline" secondItem="EN9-xR-iyg" secondAttribute="baseline" id="z60-I1-7aT"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MWF-Oa-Pyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -455,53 +518,131 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIg-Gh-gEz">
-                                <rect key="frame" x="83" y="327" width="95" height="103"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Treasure-Hunts-Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="sj1-As-Phn">
+                                <rect key="frame" x="180" y="69" width="240" height="181"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="eVI-cd-4LD"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADb-kL-omc">
+                                <rect key="frame" x="180" y="293" width="65" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="P6u-7c-1DV"/>
+                                    <constraint firstAttribute="height" constant="68" id="haX-4I-sg1"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="treasure_chest_add.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="addCache:" destination="mPt-P3-suR" eventType="touchUpInside" id="g7J-jb-8fi"/>
+                                    <action selector="addCache:" destination="mPt-P3-suR" eventType="touchUpInside" id="0Fj-Sf-Dus"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8C-WZ-OxA">
-                                <rect key="frame" x="196" y="216" width="95" height="103"/>
-                                <state key="normal" backgroundImage="treasure_chest.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="listCaches:" destination="mPt-P3-suR" eventType="touchUpInside" id="pMP-FG-dVg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHU-Nt-7eS">
-                                <rect key="frame" x="83" y="216" width="95" height="103"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhV-yH-wIV">
+                                <rect key="frame" x="184" y="436" width="56" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="wwL-9X-3hY"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="treasure-map-icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="loadMap:" destination="mPt-P3-suR" eventType="touchUpInside" id="L2r-zI-emh"/>
+                                    <action selector="loadMap:" destination="mPt-P3-suR" eventType="touchUpInside" id="0Ez-jb-Rbr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rY1-T0-jrJ">
-                                <rect key="frame" x="196" y="327" width="95" height="103"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRM-RY-ZFK">
+                                <rect key="frame" x="355" y="427" width="65" height="68"/>
+                                <state key="normal" backgroundImage="treasure_chest.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="listCaches:" destination="mPt-P3-suR" eventType="touchUpInside" id="M7p-9H-9GK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeO-9o-QfC">
+                                <rect key="frame" x="198" y="486" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="6z0-tW-8Or"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caches" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvV-mJ-Cot">
+                                <rect key="frame" x="358" y="486" width="62" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="9ac-FM-vSg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourites" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7o-Lb-bYk">
+                                <rect key="frame" x="348" y="358" width="83" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9aS-mQ-TuW"/>
+                                    <constraint firstAttribute="width" constant="83" id="zQu-to-t79"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Cache" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z00-TL-yjv">
+                                <rect key="frame" x="167" y="358" width="91" height="21"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOv-Lw-XWo">
+                                <rect key="frame" x="355" y="293" width="65" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="xSy-Vy-giC"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="treasure_chest_diskette.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="listFavourites:" destination="mPt-P3-suR" eventType="touchUpInside" id="sJd-ST-Bg5"/>
+                                    <action selector="listFavourites:" destination="mPt-P3-suR" eventType="touchUpInside" id="Bk9-fm-lns"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Treasure-Hunts-Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="sj1-As-Phn">
-                                <rect key="frame" x="56" y="64" width="240" height="133"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sj1-As-Phn" firstAttribute="centerX" secondItem="cuM-FB-sCh" secondAttribute="centerX" id="1Q2-ZW-nP8"/>
+                            <constraint firstItem="OeO-9o-QfC" firstAttribute="top" secondItem="VhV-yH-wIV" secondAttribute="bottom" id="30z-CU-SgH"/>
+                            <constraint firstItem="eRM-RY-ZFK" firstAttribute="leading" secondItem="MOv-Lw-XWo" secondAttribute="leading" id="8ML-66-TyT"/>
+                            <constraint firstItem="V7o-Lb-bYk" firstAttribute="centerX" secondItem="rvV-mJ-Cot" secondAttribute="centerX" id="Cqo-4L-aHn"/>
+                            <constraint firstItem="sj1-As-Phn" firstAttribute="trailing" secondItem="MOv-Lw-XWo" secondAttribute="trailing" id="Hwv-X2-bpt"/>
+                            <constraint firstItem="VhV-yH-wIV" firstAttribute="centerX" secondItem="ADb-kL-omc" secondAttribute="centerX" id="ICV-f2-C7s"/>
+                            <constraint firstItem="eRM-RY-ZFK" firstAttribute="trailing" secondItem="MOv-Lw-XWo" secondAttribute="trailing" id="JiY-Rv-tua"/>
+                            <constraint firstItem="MOv-Lw-XWo" firstAttribute="firstBaseline" secondItem="ADb-kL-omc" secondAttribute="firstBaseline" id="LhN-dD-uv9"/>
+                            <constraint firstItem="rvV-mJ-Cot" firstAttribute="firstBaseline" secondItem="OeO-9o-QfC" secondAttribute="firstBaseline" id="Lyt-uB-XsA"/>
+                            <constraint firstItem="rvV-mJ-Cot" firstAttribute="trailing" secondItem="eRM-RY-ZFK" secondAttribute="trailing" id="NDR-iQ-fzd"/>
+                            <constraint firstItem="VhV-yH-wIV" firstAttribute="top" secondItem="ADb-kL-omc" secondAttribute="bottom" constant="75" id="OW7-a0-76E"/>
+                            <constraint firstItem="b8s-Z6-vUy" firstAttribute="top" secondItem="VhV-yH-wIV" secondAttribute="bottom" constant="114" id="Q5R-W7-ujB"/>
+                            <constraint firstItem="b8s-Z6-vUy" firstAttribute="top" secondItem="eRM-RY-ZFK" secondAttribute="bottom" constant="108" id="RCL-XH-LER"/>
+                            <constraint firstItem="sj1-As-Phn" firstAttribute="leading" secondItem="ADb-kL-omc" secondAttribute="leading" id="Voj-Lh-1JG"/>
+                            <constraint firstItem="eRM-RY-ZFK" firstAttribute="top" secondItem="MOv-Lw-XWo" secondAttribute="bottom" constant="63" id="WHg-qF-cZq"/>
+                            <constraint firstItem="MOv-Lw-XWo" firstAttribute="baseline" secondItem="ADb-kL-omc" secondAttribute="baseline" id="b5v-3f-sM5"/>
+                            <constraint firstItem="b8s-Z6-vUy" firstAttribute="top" secondItem="ADb-kL-omc" secondAttribute="bottom" constant="239" id="biG-JV-d0D"/>
+                            <constraint firstItem="MOv-Lw-XWo" firstAttribute="bottom" secondItem="ADb-kL-omc" secondAttribute="bottom" id="gwu-hN-7wg"/>
+                            <constraint firstItem="z00-TL-yjv" firstAttribute="firstBaseline" secondItem="V7o-Lb-bYk" secondAttribute="firstBaseline" id="j26-E7-bab"/>
+                            <constraint firstItem="rvV-mJ-Cot" firstAttribute="baseline" secondItem="OeO-9o-QfC" secondAttribute="baseline" id="jXS-9b-of4"/>
+                            <constraint firstItem="MOv-Lw-XWo" firstAttribute="top" secondItem="ADb-kL-omc" secondAttribute="top" id="m8c-2b-KG9"/>
+                            <constraint firstItem="OeO-9o-QfC" firstAttribute="trailing" secondItem="VhV-yH-wIV" secondAttribute="trailing" id="mgh-qb-65f"/>
+                            <constraint firstItem="sj1-As-Phn" firstAttribute="top" secondItem="Bvg-RG-Ymn" secondAttribute="bottom" constant="49" id="nAU-XQ-Xf6"/>
+                            <constraint firstItem="z00-TL-yjv" firstAttribute="centerX" secondItem="ADb-kL-omc" secondAttribute="centerX" id="nXW-Hu-qA4"/>
+                            <constraint firstItem="MOv-Lw-XWo" firstAttribute="top" secondItem="sj1-As-Phn" secondAttribute="bottom" constant="43" id="ngm-B3-SFu"/>
+                            <constraint firstItem="V7o-Lb-bYk" firstAttribute="leading" secondItem="z00-TL-yjv" secondAttribute="trailing" constant="90" id="q0r-GS-QtZ"/>
+                            <constraint firstItem="z00-TL-yjv" firstAttribute="baseline" secondItem="V7o-Lb-bYk" secondAttribute="baseline" id="sc6-lN-vza"/>
+                            <constraint firstItem="b8s-Z6-vUy" firstAttribute="top" secondItem="OeO-9o-QfC" secondAttribute="bottom" constant="93" id="sf6-Nd-eF8"/>
+                            <constraint firstItem="eRM-RY-ZFK" firstAttribute="top" secondItem="V7o-Lb-bYk" secondAttribute="bottom" constant="45" id="xOU-hT-gQC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QMe-9d-Y85"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OEj-sK-cZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2269" y="-146"/>
+            <point key="canvasLocation" x="2259" y="-67"/>
         </scene>
         <!--Cache List View Controller-->
         <scene sceneID="PQN-yw-gEH">
@@ -515,6 +656,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caches" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Px-An-q9p">
+                                <rect key="frame" x="226" y="28" width="149" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="BVn-WR-pXN"/>
+                                    <constraint firstAttribute="width" constant="149" id="KkZ-x7-2Y1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="39"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0sj-Qp-dnB">
                                 <rect key="frame" x="0.0" y="96" width="600" height="504"/>
                                 <prototypes>
@@ -581,16 +732,6 @@
                                     <outlet property="delegate" destination="S8O-Tt-Jwo" id="fYz-7l-9fd"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caches" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Px-An-q9p">
-                                <rect key="frame" x="226" y="28" width="149" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="BVn-WR-pXN"/>
-                                    <constraint firstAttribute="width" constant="149" id="KkZ-x7-2Y1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="39"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.98383689409999997" green="0.94868487020000003" blue="0.80475514370000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -832,7 +973,7 @@
         <!--Register View Controller-->
         <scene sceneID="rbd-BN-C4C">
             <objects>
-                <viewController modalTransitionStyle="partialCurl" id="Ngh-g5-pWl" customClass="RegisterViewController" sceneMemberID="viewController">
+                <viewController id="Ngh-g5-pWl" customClass="RegisterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Nd-be-gT1"/>
                         <viewControllerLayoutGuide type="bottom" id="gzu-D4-sHg"/>
@@ -842,71 +983,84 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xSe-TN-oTZ">
-                                <rect key="frame" x="73" y="348" width="232" height="30"/>
+                                <rect key="frame" x="184" y="266" width="232" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZX7-Ik-tig">
-                                <rect key="frame" x="73" y="386" width="232" height="30"/>
+                                <rect key="frame" x="184" y="304" width="232" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D6j-ly-FC8">
+                                <rect key="frame" x="184" y="228" width="232" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="232" id="Yck-17-vr8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YDE-OH-CDH">
+                                <rect key="frame" x="184" y="342" width="232" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rn-Y7-uE1">
-                                <rect key="frame" x="128" y="491" width="90" height="30"/>
-                                <color key="backgroundColor" red="0.95294123890000004" green="0.92549026010000002" blue="0.76862752440000004" alpha="1" colorSpace="deviceRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDD-MH-qfv">
+                                <rect key="frame" x="16" y="45" width="82" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="zOw-8Y-GTV"/>
+                                    <constraint firstAttribute="width" constant="82" id="sga-Wz-rhD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
+                                <state key="normal" title="&lt;Back">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissRegister:" destination="Ngh-g5-pWl" eventType="touchUpInside" id="ObY-a1-Bz0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rn-Y7-uE1">
+                                <rect key="frame" x="245" y="399" width="111" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="CaH-6U-kA6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="29"/>
                                 <state key="normal" title="Register">
-                                    <color key="titleColor" red="0.82352948189999997" green="0.77647066119999997" blue="0.62352943419999995" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="registerUser:" destination="Ngh-g5-pWl" eventType="touchUpInside" id="jcp-aY-Yj0"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D6j-ly-FC8">
-                                <rect key="frame" x="73" y="310" width="232" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="MTO-aU-8sB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SVp-6t-cw8">
-                                <rect key="frame" x="73" y="424" width="232" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="232" id="mNm-Ah-Mz4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="D6j-ly-FC8" firstAttribute="leading" secondItem="SVp-6t-cw8" secondAttribute="leading" id="1Zd-hJ-NQR"/>
-                            <constraint firstItem="xSe-TN-oTZ" firstAttribute="top" secondItem="D6j-ly-FC8" secondAttribute="bottom" constant="8" symbolic="YES" id="3I6-sj-nUg"/>
-                            <constraint firstItem="SVp-6t-cw8" firstAttribute="trailing" secondItem="ZX7-Ik-tig" secondAttribute="trailing" id="5fV-Mt-Ciz"/>
-                            <constraint firstItem="ZX7-Ik-tig" firstAttribute="trailing" secondItem="xSe-TN-oTZ" secondAttribute="trailing" id="EIk-3F-KGk"/>
-                            <constraint firstItem="ZX7-Ik-tig" firstAttribute="top" secondItem="xSe-TN-oTZ" secondAttribute="bottom" constant="8" id="J2C-Cf-zZV"/>
-                            <constraint firstItem="0rn-Y7-uE1" firstAttribute="top" secondItem="SVp-6t-cw8" secondAttribute="bottom" constant="37" id="Jqe-d6-Dw0"/>
-                            <constraint firstItem="D6j-ly-FC8" firstAttribute="trailing" secondItem="xSe-TN-oTZ" secondAttribute="trailing" id="OU2-Pz-e3v"/>
-                            <constraint firstItem="D6j-ly-FC8" firstAttribute="leading" secondItem="xSe-TN-oTZ" secondAttribute="leading" id="ZQN-QJ-9qv"/>
-                            <constraint firstItem="D6j-ly-FC8" firstAttribute="leading" secondItem="LFc-IM-JkX" secondAttribute="leading" constant="73" id="aoo-Xq-uBD"/>
-                            <constraint firstItem="gzu-D4-sHg" firstAttribute="top" secondItem="0rn-Y7-uE1" secondAttribute="bottom" constant="79" id="bwE-nj-r0f"/>
-                            <constraint firstItem="SVp-6t-cw8" firstAttribute="top" secondItem="ZX7-Ik-tig" secondAttribute="bottom" constant="8" id="fgc-f4-1Iv"/>
-                            <constraint firstItem="0rn-Y7-uE1" firstAttribute="leading" secondItem="LFc-IM-JkX" secondAttribute="leading" constant="128" id="hBY-yc-HaZ"/>
-                            <constraint firstItem="xSe-TN-oTZ" firstAttribute="leading" secondItem="ZX7-Ik-tig" secondAttribute="leading" id="koT-Cx-tzz"/>
-                            <constraint firstItem="D6j-ly-FC8" firstAttribute="top" secondItem="0Nd-be-gT1" secondAttribute="bottom" constant="290" id="oiF-rN-OlK"/>
+                            <constraint firstItem="xSe-TN-oTZ" firstAttribute="leading" secondItem="D6j-ly-FC8" secondAttribute="leading" id="1xD-S5-EPg"/>
+                            <constraint firstItem="gDD-MH-qfv" firstAttribute="leading" secondItem="LFc-IM-JkX" secondAttribute="leadingMargin" id="FVe-Pz-j5M"/>
+                            <constraint firstItem="gzu-D4-sHg" firstAttribute="top" secondItem="gDD-MH-qfv" secondAttribute="bottom" constant="525" id="L1W-kd-7hq"/>
+                            <constraint firstItem="xSe-TN-oTZ" firstAttribute="centerX" secondItem="LFc-IM-JkX" secondAttribute="centerX" id="U8P-0u-eXq"/>
+                            <constraint firstItem="xSe-TN-oTZ" firstAttribute="top" secondItem="D6j-ly-FC8" secondAttribute="bottom" constant="8" symbolic="YES" id="V7Y-Ke-QSo"/>
+                            <constraint firstItem="YDE-OH-CDH" firstAttribute="top" secondItem="ZX7-Ik-tig" secondAttribute="bottom" constant="8" symbolic="YES" id="XIx-vg-roH"/>
+                            <constraint firstItem="YDE-OH-CDH" firstAttribute="trailing" secondItem="ZX7-Ik-tig" secondAttribute="trailing" id="Yrh-5J-D5X"/>
+                            <constraint firstItem="gzu-D4-sHg" firstAttribute="top" secondItem="0rn-Y7-uE1" secondAttribute="bottom" constant="171" id="Zc7-Me-jX9"/>
+                            <constraint firstItem="0rn-Y7-uE1" firstAttribute="top" secondItem="YDE-OH-CDH" secondAttribute="bottom" constant="27" id="grE-0I-doM"/>
+                            <constraint firstItem="ZX7-Ik-tig" firstAttribute="leading" secondItem="YDE-OH-CDH" secondAttribute="leading" id="hHD-eH-I3s"/>
+                            <constraint firstItem="0rn-Y7-uE1" firstAttribute="centerX" secondItem="YDE-OH-CDH" secondAttribute="centerX" id="jpr-Hu-Oka"/>
+                            <constraint firstItem="ZX7-Ik-tig" firstAttribute="leading" secondItem="xSe-TN-oTZ" secondAttribute="leading" id="klD-83-aeg"/>
+                            <constraint firstItem="ZX7-Ik-tig" firstAttribute="top" secondItem="xSe-TN-oTZ" secondAttribute="bottom" constant="8" symbolic="YES" id="l0j-JP-WOr"/>
+                            <constraint firstItem="gDD-MH-qfv" firstAttribute="top" secondItem="0Nd-be-gT1" secondAttribute="bottom" constant="25" id="mpL-bo-98r"/>
+                            <constraint firstItem="xSe-TN-oTZ" firstAttribute="trailing" secondItem="ZX7-Ik-tig" secondAttribute="trailing" id="rcb-6U-paU"/>
+                            <constraint firstItem="xSe-TN-oTZ" firstAttribute="trailing" secondItem="D6j-ly-FC8" secondAttribute="trailing" id="sUh-6j-h75"/>
+                            <constraint firstItem="D6j-ly-FC8" firstAttribute="top" secondItem="0Nd-be-gT1" secondAttribute="bottom" constant="208" id="zU6-6N-2ec"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="confirmedPassword" destination="SVp-6t-cw8" id="SOR-X2-JaW"/>
+                        <outlet property="confirmedPassword" destination="YDE-OH-CDH" id="ChU-Pv-2dJ"/>
                         <outlet property="email" destination="xSe-TN-oTZ" id="jyl-QL-2i3"/>
                         <outlet property="password" destination="ZX7-Ik-tig" id="x2h-hM-daC"/>
                         <outlet property="username" destination="D6j-ly-FC8" id="35s-b3-FcW"/>

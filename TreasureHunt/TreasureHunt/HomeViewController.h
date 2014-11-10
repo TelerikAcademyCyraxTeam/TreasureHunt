@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeViewController : UIViewController
-- (IBAction)listCaches:(UIButton *)sender;
 - (IBAction)addCache:(UIButton *)sender;
-- (IBAction)loadMap:(UIButton *)sender;
 - (IBAction)listFavourites:(UIButton *)sender;
+- (IBAction)listCaches:(UIButton *)sender;
+- (IBAction)loadMap:(UIButton *)sender;
 
 @end

@@ -39,21 +39,6 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)listCaches:(UIButton *)sender {
     CacheListViewController *cachesList = [_storyboard instantiateViewControllerWithIdentifier:@"cachesList"];
     PFQuery *query = [PFQuery queryWithClassName:@"Cash"];
@@ -86,8 +71,19 @@
 }
 
 - (IBAction)loadMap:(UIButton *)sender {
-    MapViewController *newCacheView = [_storyboard instantiateViewControllerWithIdentifier:@"map"];
-    [self presentViewController:newCacheView animated:YES completion:nil];
+    MapViewController *mapView = [_storyboard instantiateViewControllerWithIdentifier:@"map"];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = CGRectMake(10, 50, 100, 20);
+    button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
+    [button setTitle:@"<Back" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(closeMap)  forControlEvents:UIControlEventTouchUpInside];
+    [mapView.view addSubview:button];
+    [self presentViewController:mapView animated:YES completion:nil];
+
+}
+
+-(void) closeMap{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

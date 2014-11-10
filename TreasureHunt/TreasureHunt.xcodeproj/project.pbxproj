@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		84031B601A0A508E00BDDE91 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84031B5D1A0A508E00BDDE91 /* Bolts.framework */; };
 		84031B611A0A508E00BDDE91 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84031B5E1A0A508E00BDDE91 /* Parse.framework */; };
+		8449218F1A1061BC00C3EFB2 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8449218D1A1061BC00C3EFB2 /* arrow.png */; };
+		844921901A1061BC00C3EFB2 /* Treasure-Hunts-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8449218E1A1061BC00C3EFB2 /* Treasure-Hunts-Logo.png */; };
 		8460CACD1A066AD10036BCB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8460CACC1A066AD10036BCB3 /* main.m */; };
 		8460CAD01A066AD10036BCB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8460CACF1A066AD10036BCB3 /* AppDelegate.m */; };
 		8460CAD61A066AD10036BCB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8460CAD41A066AD10036BCB3 /* Main.storyboard */; };
@@ -83,6 +85,8 @@
 		84031B5D1A0A508E00BDDE91 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		84031B5E1A0A508E00BDDE91 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		84031B5F1A0A508E00BDDE91 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		8449218D1A1061BC00C3EFB2 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		8449218E1A1061BC00C3EFB2 /* Treasure-Hunts-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Treasure-Hunts-Logo.png"; sourceTree = "<group>"; };
 		8460CAC71A066AD10036BCB3 /* TreasureHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreasureHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8460CACB1A066AD10036BCB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8460CACC1A066AD10036BCB3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -370,6 +374,8 @@
 		84F7807B1A0E4AFA00B90A0A /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				8449218D1A1061BC00C3EFB2 /* arrow.png */,
+				8449218E1A1061BC00C3EFB2 /* Treasure-Hunts-Logo.png */,
 				84F780DB1A103B8900B90A0A /* cross.png */,
 				84F780831A0E656200B90A0A /* treasure_map_min.png */,
 				84F780811A0E63DC00B90A0A /* treasure_chest_diskette_min.png */,
@@ -466,6 +472,7 @@
 			files = (
 				84F780DC1A103B8900B90A0A /* cross.png in Resources */,
 				84F780751A0E4A7E00B90A0A /* homeBackground.png in Resources */,
+				844921901A1061BC00C3EFB2 /* Treasure-Hunts-Logo.png in Resources */,
 				84F780821A0E63DC00B90A0A /* treasure_chest_diskette_min.png in Resources */,
 				84F780841A0E656200B90A0A /* treasure_map_min.png in Resources */,
 				84F780791A0E4A7E00B90A0A /* treasure_chest.png in Resources */,
@@ -477,6 +484,7 @@
 				8460CADB1A066AD10036BCB3 /* LaunchScreen.xib in Resources */,
 				84F780771A0E4A7E00B90A0A /* treasure_chest_add.png in Resources */,
 				8460CAD81A066AD10036BCB3 /* Images.xcassets in Resources */,
+				8449218F1A1061BC00C3EFB2 /* arrow.png in Resources */,
 				84F780761A0E4A7E00B90A0A /* loginbutton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

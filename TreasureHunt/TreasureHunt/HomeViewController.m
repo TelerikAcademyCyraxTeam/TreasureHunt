@@ -60,6 +60,7 @@
 
 }
 
+
 -(void)listFavourites:(UIButton *)sender{
             CacheListViewController *favourites = [_storyboard instantiateViewControllerWithIdentifier:@"favourites"];
 
@@ -73,7 +74,17 @@
 
 - (IBAction)loadMap:(UIButton *)sender {
     MapViewController *mapView = [_storyboard instantiateViewControllerWithIdentifier:@"map"];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = CGRectMake(10, 50, 100, 20);
+    button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
+    [button setTitle:@"<Back" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(closeMap)  forControlEvents:UIControlEventTouchUpInside];
+    [mapView.view addSubview:button];
     [self presentViewController:mapView animated:YES completion:nil];
+}
 
+-(void) closeMap{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
