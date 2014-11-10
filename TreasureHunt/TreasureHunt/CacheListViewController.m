@@ -13,6 +13,7 @@
 #import "Cache.h"
 #import "CodeDataHelper.h"
 #import "SingleCacheMapViewController.h"
+#import "CacheDetailsViewController.h"
 
 @interface CacheListViewController ()
 
@@ -23,8 +24,8 @@
 static PFObject * selectedCache;
 
 @implementation CacheListViewController{
-    UILongPressGestureRecognizer *longPress;
-    UIStoryboard *storyboard;
+    UILongPressGestureRecognizer *_longPress;
+    UIStoryboard *_storyboard;
 
 }
 
@@ -34,11 +35,11 @@ static PFObject * selectedCache;
 
 - (void)viewDidLoad {
      [super viewDidLoad];
-    storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(loadNextView)];
-    longPress.minimumPressDuration = 1.0f;
-    longPress.allowableMovement = 100.0f;
-    [self.view addGestureRecognizer:longPress];
+    _storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    _longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(loadNextView)];
+    _longPress.minimumPressDuration = 1.0f;
+    _longPress.allowableMovement = 100.0f;
+    [self.view addGestureRecognizer:_longPress];
     // Do any additional setup after loading the view.
    // self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"homeBackground.png"]];
         self.tableView.backgroundColor =[UIColor colorWithPatternImage:[UIImage imageNamed:@"homeBackground.png"]];
@@ -50,7 +51,7 @@ static PFObject * selectedCache;
 }
 
 -(void)loadNextView{
-    UIViewController *next = [storyboard instantiateViewControllerWithIdentifier:@"longPressHome"];
+    UIViewController *next = [_storyboard instantiateViewControllerWithIdentifier:@"longPressHome"];
     [self presentViewController:next animated:YES completion:nil];
     
 }
@@ -89,6 +90,14 @@ static PFObject * selectedCache;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+   CacheDetailsViewController *details = [_storyboard instantiateViewControllerWithIdentifier:@"details"];
+    PFObject *selectedCache = [self.caches objectAtIndex:indexPath.row];
+    details.currentCache = selectedCache;
+    [self presentViewController:details animated:YES completion:nil];
+    
+}
+
 -(void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerLeftUtilityButtonWithIndex:(NSInteger)index{
     
     NSIndexPath *currentIndexPath = [self.tableView indexPathForCell:cell];
@@ -122,9 +131,6 @@ static PFObject * selectedCache;
             [formatter setDateFormat:@"yyyy-MM-dd HH-mm-ss"];
             NSString *currentCacheDateCreated = [formatter stringFromDate:selectedCache.createdAt];
             NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Cache"];
-            //NSSortDescriptor *sort =
-            //[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
-            //[request setSortDescriptors:[NSArray arrayWithObject:sort]];
             _cdHelper = [CodeDataHelper getInstance];
             [_cdHelper setupCoreData];
             
@@ -181,15 +187,5 @@ static PFObject * selectedCache;
             break;
     }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

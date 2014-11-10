@@ -49,6 +49,7 @@
 		84EE3E2B1A0BB99F0039FD9C /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE3E2A1A0BB99F0039FD9C /* Toast.m */; };
 		84EE3E431A0D59630039FD9C /* CacheCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE3E421A0D59630039FD9C /* CacheCellTableViewCell.m */; };
 		84EE3E591A0D5A330039FD9C /* CacheListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE3E581A0D5A330039FD9C /* CacheListViewController.m */; };
+		84F4779D1A108CB200338AB5 /* CacheDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F4779C1A108CB200338AB5 /* CacheDetailsViewController.m */; };
 		84F780741A0E4A7E00B90A0A /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84F7806D1A0E4A7E00B90A0A /* background.jpg */; };
 		84F780751A0E4A7E00B90A0A /* homeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F7806E1A0E4A7E00B90A0A /* homeBackground.png */; };
 		84F780761A0E4A7E00B90A0A /* loginbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F7806F1A0E4A7E00B90A0A /* loginbutton.png */; };
@@ -140,6 +141,8 @@
 		84EE3E421A0D59630039FD9C /* CacheCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheCellTableViewCell.m; sourceTree = "<group>"; };
 		84EE3E571A0D5A330039FD9C /* CacheListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheListViewController.h; sourceTree = "<group>"; };
 		84EE3E581A0D5A330039FD9C /* CacheListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheListViewController.m; sourceTree = "<group>"; };
+		84F4779B1A108CB200338AB5 /* CacheDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheDetailsViewController.h; sourceTree = "<group>"; };
+		84F4779C1A108CB200338AB5 /* CacheDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheDetailsViewController.m; sourceTree = "<group>"; };
 		84F7806D1A0E4A7E00B90A0A /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		84F7806E1A0E4A7E00B90A0A /* homeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeBackground.png; sourceTree = "<group>"; };
 		84F7806F1A0E4A7E00B90A0A /* loginbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginbutton.png; sourceTree = "<group>"; };
@@ -348,6 +351,8 @@
 				84A395E91A0FEE980071DEB0 /* SingleCacheMapViewController.m */,
 				84F780D81A1034B700B90A0A /* FavouritesViewController.h */,
 				84F780D91A1034B800B90A0A /* FavouritesViewController.m */,
+				84F4779B1A108CB200338AB5 /* CacheDetailsViewController.h */,
+				84F4779C1A108CB200338AB5 /* CacheDetailsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -503,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F4779D1A108CB200338AB5 /* CacheDetailsViewController.m in Sources */,
 				84F780801A0E4C9B00B90A0A /* NewCacheViewController.m in Sources */,
 				84F780D11A0FA0FE00B90A0A /* LongPressHomeViewController.m in Sources */,
 				84F780901A0E6C4C00B90A0A /* SWLongPressGestureRecognizer.m in Sources */,
