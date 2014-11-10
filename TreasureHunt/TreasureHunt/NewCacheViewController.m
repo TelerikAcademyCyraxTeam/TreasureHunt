@@ -8,6 +8,7 @@
 
 #import "NewCacheViewController.h"
 #import <Parse/Parse.h>
+#import "CacheListViewController.h"
 #import "Toast.h"
 
 @interface NewCacheViewController (){
@@ -103,6 +104,8 @@
     [cache saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if(!error){
             [self.view makeToast:@"Cache created!"];
+            CacheListViewController *list = [_storyboard instantiateViewControllerWithIdentifier:@"home"];
+            [self presentViewController:list animated:YES completion:nil];
         }
         else{
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Create command failed!" message:@"check newCacheViewController" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
