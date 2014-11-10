@@ -9,6 +9,7 @@
 #import "CacheDetailsViewController.h"
 #import <Parse/Parse.h>
 #import "CacheImageViewController.h"
+#import "SingleCacheMapViewController.h"
 
 @interface CacheDetailsViewController ()
 
@@ -17,6 +18,7 @@
 @implementation CacheDetailsViewController{
     UIImage *image;
     UIStoryboard *_storyboard;
+    UISwipeGestureRecognizer *_swipeUp;
 }
 
 - (void)viewDidLoad {
@@ -25,6 +27,7 @@
      self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"homeBackground.png"]];
     self.name.text = [self.currentCache objectForKey:@"name"];
        BOOL flag = [self.currentCache objectForKey:@"isFound"];
+    NSLog(@"%d",(int)flag);
     if(flag == YES){
         self.isFound.text = @"YES";
     }
@@ -36,7 +39,16 @@
     self.hint.text = [self.currentCache objectForKey:@"hint"];
     self.createdBy.text = [self.currentCache objectForKey:@"createdBy"];
     
+     _swipeUp=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeleft:)];
+    _swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
+    [self.view addGestureRecognizer:_swipeUp];
+    
         // Do any additional setup after loading the view.
+}
+
+-(void)swipeleft:(UISwipeGestureRecognizer*)gestureRecognizer
+{
+    [self getPhoto];
 }
 
 -(void) getPhoto{
@@ -80,6 +92,8 @@
 }
 
 - (IBAction)loadMap:(UIButton *)sender {
+    SingleCacheMapViewController *mapView = [[SingleCacheMapViewController alloc] init];
+    [self presentViewController:mapView animated:YES completion:nil];
 }
 - (IBAction)getBack:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

@@ -70,6 +70,14 @@
     mapView_.delegate = self;
     mapView_.myLocationEnabled = YES;
     self.view = mapView_;
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = CGRectMake(10, 40, 100, 20);
+    button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
+    [button setTitle:@"<Back" forState:UIControlStateNormal];
+    [button setBackgroundColor:[UIColor lightGrayColor]];
+    [button addTarget:self action:@selector(closeMap)  forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+
     
     // Creates a marker in the center of the map.
     GMSMarker *marker = [[GMSMarker alloc] init];
@@ -79,6 +87,11 @@
     marker.map = mapView_;
     
 }
+
+-(void) closeMap{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 -(void)setMarkers {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Cache"];
     //NSSortDescriptor *sort =

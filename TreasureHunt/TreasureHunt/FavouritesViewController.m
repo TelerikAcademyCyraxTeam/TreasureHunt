@@ -94,9 +94,7 @@
     return [self.caches count];
 }
 
--(void) closeMap{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+
 
 -(void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerLeftUtilityButtonWithIndex:(NSInteger)index{
     
@@ -105,12 +103,6 @@
     switch (index) {
         case 0:{
             SingleCacheMapViewController *mapView = [[SingleCacheMapViewController alloc] init];
-            UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-            button.frame = CGRectMake(10, 50, 100, 20);
-            button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
-            [button setTitle:@"<Back" forState:UIControlStateNormal];
-            [button addTarget:self action:@selector(closeMap)  forControlEvents:UIControlEventTouchUpInside];
-            [mapView.view addSubview:button];
             [self presentViewController:mapView animated:YES completion:nil];
             break;
         }

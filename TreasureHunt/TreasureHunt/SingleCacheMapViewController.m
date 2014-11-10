@@ -71,15 +71,20 @@
                                          longitude:_currentLocation.coordinate.longitude
                                               zoom:12];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    //mapView_.delegate = self;
     mapView_.myLocationEnabled = YES;
     self.view = mapView_;
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = CGRectMake(10, 50, 100, 20);
+    button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
+    [button setTitle:@"<Back" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(closeMap)  forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+
     
     // Creates a marker in the center of the map.
     GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = camera.target;//  CLLocationCoordinate2DMake(42.7, 23.3333);
+    marker.position = camera.target;
     marker.title = @"You are here!";
-    //marker.snippet = @"Australia";
     marker.map = mapView_;
     
 }
@@ -104,19 +109,13 @@
     
 }
 
+-(void) closeMap{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
