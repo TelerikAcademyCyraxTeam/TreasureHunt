@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 #import "CacheImageViewController.h"
 #import "SingleCacheMapViewController.h"
-
+#import "CacheListViewController.h"
 @interface CacheDetailsViewController ()
 
 @end
@@ -24,22 +24,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"homeBackground.png"]];
-    self.name.text = [self.currentCache objectForKey:@"name"];
-       BOOL flag = [self.currentCache objectForKey:@"isFound"];
-    NSLog(@"%d",(int)flag);
-    if(flag == YES){
-        self.isFound.text = @"YES";
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"homeBackground.png"]];
+    if([self.parentViewController isKindOfClass: [CacheListViewController class]]){
+        self.name.text = [self.currentCache objectForKey:@"name"];
+        BOOL flag = [self.currentCache objectForKey:@"isFound"];
+        NSLog(@"%d",(int)flag);
+        if(flag == YES){
+            self.isFound.text = @"YES";
+        }
+        else{
+            self.isFound.text = @"NO";
+        }
+        
+        self.cacheDescription.text =[self.currentCache objectForKey:@"cashDescription"];
+        self.hint.text = [self.currentCache objectForKey:@"hint"];
+        self.createdBy.text = [self.currentCache objectForKey:@"createdBy"];
+        // [self.showPhotoButton setEnabled:YES];
+
     }
     else{
-        self.isFound.text = @"NO";
+        self.name.text = self.localCache.name;
+        if(self.localCache.isFound){
+            self.isFound.text = @"YES";
+        }
+        else{
+            self.isFound.text = @"NO";
+        }
+        
+        self.cacheDescription.text = self.localCache.cacheDescription;
+        self.hint.text = self.localCache.hint;
+        self.createdBy.text = self.localCache.userCreated;
+      //  [self.showPhotoButton setEnabled:NO];
     }
-    NSString *str =  [self.currentCache objectForKey:@"cashDescription"];
-    self.cacheDescription.text =[self.currentCache objectForKey:@"cashDescription"];
-    self.hint.text = [self.currentCache objectForKey:@"hint"];
-    self.createdBy.text = [self.currentCache objectForKey:@"createdBy"];
     
-     _swipeUp=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeleft:)];
+    _swipeUp=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeleft:)];
     _swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
     [self.view addGestureRecognizer:_swipeUp];
     
@@ -66,17 +84,11 @@
                             [self presentViewController:cacheImageView animated:YES completion:nil];
                             
                         }
-                        else{
-                            NSLog(@"mi shte gurmi");
-                        }
                     }];
                     
                     break;
                 }
             }
-        }
-        else{
-            NSLog(@"GRESHKAA BE");
         }
     }];
 

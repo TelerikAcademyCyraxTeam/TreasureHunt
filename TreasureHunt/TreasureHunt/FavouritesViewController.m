@@ -13,6 +13,7 @@
 #import "Cache.h"
 #import "CodeDataHelper.h"
 #import "SingleCacheMapViewController.h"
+#import "CacheDetailsViewController.h"
 
 @interface FavouritesViewController ()
 @property(nonatomic, strong) CodeDataHelper* cdHelper;
@@ -20,13 +21,13 @@
 
 @implementation FavouritesViewController{
     UILongPressGestureRecognizer *longPress;
-    UIStoryboard *storyboard;
+    UIStoryboard *_storyboard;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self updateTable];
-    storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    _storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(loadNextView)];
     longPress.minimumPressDuration = 1.0f;
     longPress.allowableMovement = 100.0f;
@@ -61,7 +62,7 @@
 */
 
 -(void)loadNextView{
-    UIViewController *next = [storyboard instantiateViewControllerWithIdentifier:@"longPressHome"];
+    UIViewController *next = [_storyboard instantiateViewControllerWithIdentifier:@"longPressHome"];
     [self presentViewController:next animated:YES completion:nil];
 }
 
@@ -94,6 +95,13 @@
     return [self.caches count];
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    CacheDetailsViewController *details = [_storyboard instantiateViewControllerWithIdentifier:@"details"];
+    Cache *selectedCache = [self.caches objectAtIndex:indexPath.row];
+    details.localCache = selectedCache;
+    [self presentViewController:details animated:YES completion:nil];
+    
+}
 
 
 -(void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerLeftUtilityButtonWithIndex:(NSInteger)index{

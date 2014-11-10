@@ -31,24 +31,10 @@
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     if(currentUser){
-        //push home view screen
-        CacheListViewController *home = [storyboard instantiateViewControllerWithIdentifier:@"home"];
-       // PFQuery *query = [PFQuery queryWithClassName:@"Cash"];
-        //[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-          //  if(!error){
-                //home.caches = objects;
-                self.window.rootViewController = home;
-           // }
-           // else{
-              //  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fetching data failed!" message:@"Check connection!"  delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-             //   [alert show];
-            //}
-       // }];
-
-        
+         CacheListViewController *home = [storyboard instantiateViewControllerWithIdentifier:@"home"];
+        self.window.rootViewController = home;
     }
     else{
-        //push login screen
         UIViewController *login = [storyboard instantiateViewControllerWithIdentifier:@"login"];
         self.window.rootViewController = login;
     }
