@@ -597,18 +597,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Treasure-Hunts-Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BuG-M4-wvF">
-                                <rect key="frame" x="180" y="58" width="240" height="181"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="18v-mB-mdu"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Treasure-Hunts-Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BuG-M4-wvF">
+                                <rect key="frame" x="80" y="61" width="240" height="181"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN9-xR-iyg">
-                                <rect key="frame" x="180" y="276" width="65" height="68"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="Qsz-L3-D8P"/>
-                                    <constraint firstAttribute="width" constant="65" id="nGC-FT-8SM"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN9-xR-iyg">
+                                <rect key="frame" x="80" y="279" width="65" height="68"/>
                                 <state key="normal" backgroundImage="treasure_chest_add.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -616,11 +609,8 @@
                                     <action selector="addCache:" destination="iYT-gv-rGz" eventType="touchUpInside" id="SSG-ZG-Qqr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ug4-e4-Qjo">
-                                <rect key="frame" x="355" y="276" width="65" height="68"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="h4S-6p-4Xb"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ug4-e4-Qjo">
+                                <rect key="frame" x="224" y="279" width="65" height="68"/>
                                 <state key="normal" backgroundImage="treasure_chest_diskette.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -628,11 +618,8 @@
                                     <action selector="listFavourites:" destination="iYT-gv-rGz" eventType="touchUpInside" id="Y8P-px-fOt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mng-4Y-va7">
-                                <rect key="frame" x="268" y="276" width="65" height="68"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="xia-ef-aNl"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="748" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mng-4Y-va7">
+                                <rect key="frame" x="224" y="412" width="65" height="68"/>
                                 <state key="normal" backgroundImage="treasure_chest.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -640,8 +627,8 @@
                                     <action selector="listCaches:" destination="iYT-gv-rGz" eventType="touchUpInside" id="X8n-jR-zn4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIJ-O7-D28">
-                                <rect key="frame" x="268" y="331" width="65" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIJ-O7-D28">
+                                <rect key="frame" x="80" y="412" width="65" height="64"/>
                                 <state key="normal" backgroundImage="treasure-map-icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -649,33 +636,32 @@
                                     <action selector="loadMap:" destination="iYT-gv-rGz" eventType="touchUpInside" id="UPF-rL-73d"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Cache" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOd-l2-gPL">
+                                <rect key="frame" x="80" y="360" width="91" height="21"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caches" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaT-Rs-fDV">
+                                <rect key="frame" x="211" y="494" width="91" height="21"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnX-bs-HWj">
+                                <rect key="frame" x="80" y="494" width="91" height="21"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" fixedFrame="YES" text="Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88e-JG-nGC">
+                                <rect key="frame" x="211" y="360" width="91" height="21"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="BuG-M4-wvF" firstAttribute="top" secondItem="wI5-Hl-lFB" secondAttribute="bottom" constant="38" id="42Z-rZ-ibX"/>
-                            <constraint firstItem="pIJ-O7-D28" firstAttribute="centerX" secondItem="BuG-M4-wvF" secondAttribute="centerX" id="4w2-3I-gj0"/>
-                            <constraint firstItem="Ug4-e4-Qjo" firstAttribute="leading" secondItem="pIJ-O7-D28" secondAttribute="trailing" constant="22" id="8yw-Ix-fnc"/>
-                            <constraint firstItem="pIJ-O7-D28" firstAttribute="leading" secondItem="Mng-4Y-va7" secondAttribute="leading" id="H4D-WN-3Nv"/>
-                            <constraint firstItem="pIJ-O7-D28" firstAttribute="trailing" secondItem="Mng-4Y-va7" secondAttribute="trailing" id="KA6-4Y-PT8"/>
-                            <constraint firstItem="EN9-xR-iyg" firstAttribute="top" secondItem="BuG-M4-wvF" secondAttribute="bottom" constant="37" id="KWj-d3-pnA"/>
-                            <constraint firstItem="BuG-M4-wvF" firstAttribute="centerX" secondItem="TFf-UJ-vgD" secondAttribute="centerX" id="LhY-YX-Hu1"/>
-                            <constraint firstItem="Ug4-e4-Qjo" firstAttribute="trailing" secondItem="BuG-M4-wvF" secondAttribute="trailing" id="RJT-YR-CQQ"/>
-                            <constraint firstItem="EN9-xR-iyg" firstAttribute="top" secondItem="TFf-UJ-vgD" secondAttribute="top" constant="276" id="TBC-cz-OFj"/>
-                            <constraint firstItem="Mng-4Y-va7" firstAttribute="firstBaseline" secondItem="Ug4-e4-Qjo" secondAttribute="firstBaseline" id="XvT-na-6IY"/>
-                            <constraint firstItem="Ug4-e4-Qjo" firstAttribute="top" secondItem="EN9-xR-iyg" secondAttribute="top" id="ZJ9-KV-ytx"/>
-                            <constraint firstItem="EN9-xR-iyg" firstAttribute="leading" secondItem="BuG-M4-wvF" secondAttribute="leading" id="dhx-M5-aDf"/>
-                            <constraint firstItem="Ug4-e4-Qjo" firstAttribute="firstBaseline" secondItem="EN9-xR-iyg" secondAttribute="firstBaseline" id="eUt-ax-0qO"/>
-                            <constraint firstItem="Mng-4Y-va7" firstAttribute="bottom" secondItem="Ug4-e4-Qjo" secondAttribute="bottom" id="fJg-Fk-BSi"/>
-                            <constraint firstItem="Mng-4Y-va7" firstAttribute="baseline" secondItem="Ug4-e4-Qjo" secondAttribute="baseline" id="fr8-hb-hlU"/>
-                            <constraint firstItem="ap0-EY-dqX" firstAttribute="top" secondItem="pIJ-O7-D28" secondAttribute="bottom" constant="205" id="gBB-7n-NUl"/>
-                            <constraint firstItem="Mng-4Y-va7" firstAttribute="top" secondItem="Ug4-e4-Qjo" secondAttribute="top" id="ljj-TW-xoN"/>
-                            <constraint firstItem="pIJ-O7-D28" firstAttribute="top" secondItem="BuG-M4-wvF" secondAttribute="bottom" constant="92" id="lsm-xh-7qi"/>
-                            <constraint firstItem="Mng-4Y-va7" firstAttribute="baseline" secondItem="EN9-xR-iyg" secondAttribute="baseline" id="m8j-Tb-eEA"/>
-                            <constraint firstItem="Mng-4Y-va7" firstAttribute="bottom" secondItem="EN9-xR-iyg" secondAttribute="bottom" id="o68-2a-F51"/>
-                            <constraint firstItem="Mng-4Y-va7" firstAttribute="firstBaseline" secondItem="EN9-xR-iyg" secondAttribute="firstBaseline" id="sAg-Jh-0gS"/>
-                            <constraint firstItem="Ug4-e4-Qjo" firstAttribute="bottom" secondItem="EN9-xR-iyg" secondAttribute="bottom" id="tF6-La-F1t"/>
-                            <constraint firstItem="Ug4-e4-Qjo" firstAttribute="baseline" secondItem="EN9-xR-iyg" secondAttribute="baseline" id="z60-I1-7aT"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MWF-Oa-Pyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -725,7 +711,7 @@
                                     <action selector="loadMap:" destination="mPt-P3-suR" eventType="touchUpInside" id="0Ez-jb-Rbr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRM-RY-ZFK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRM-RY-ZFK">
                                 <rect key="frame" x="355" y="427" width="65" height="68"/>
                                 <state key="normal" backgroundImage="treasure_chest.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -752,16 +738,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourites" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7o-Lb-bYk">
-                                <rect key="frame" x="348" y="358" width="83" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="9aS-mQ-TuW"/>
-                                    <constraint firstAttribute="width" constant="83" id="zQu-to-t79"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Cache" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z00-TL-yjv">
                                 <rect key="frame" x="167" y="358" width="91" height="21"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
@@ -780,6 +756,16 @@
                                     <action selector="listFavourites:" destination="mPt-P3-suR" eventType="touchUpInside" id="Bk9-fm-lns"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7o-Lb-bYk">
+                                <rect key="frame" x="348" y="358" width="83" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9aS-mQ-TuW"/>
+                                    <constraint firstAttribute="width" constant="83" id="zQu-to-t79"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -795,9 +781,9 @@
                             <constraint firstItem="rvV-mJ-Cot" firstAttribute="trailing" secondItem="eRM-RY-ZFK" secondAttribute="trailing" id="NDR-iQ-fzd"/>
                             <constraint firstItem="VhV-yH-wIV" firstAttribute="top" secondItem="ADb-kL-omc" secondAttribute="bottom" constant="75" id="OW7-a0-76E"/>
                             <constraint firstItem="b8s-Z6-vUy" firstAttribute="top" secondItem="VhV-yH-wIV" secondAttribute="bottom" constant="114" id="Q5R-W7-ujB"/>
-                            <constraint firstItem="b8s-Z6-vUy" firstAttribute="top" secondItem="eRM-RY-ZFK" secondAttribute="bottom" constant="108" id="RCL-XH-LER"/>
+                            <constraint firstItem="b8s-Z6-vUy" firstAttribute="top" secondItem="eRM-RY-ZFK" secondAttribute="bottom" constant="105" id="RCL-XH-LER"/>
                             <constraint firstItem="sj1-As-Phn" firstAttribute="leading" secondItem="ADb-kL-omc" secondAttribute="leading" id="Voj-Lh-1JG"/>
-                            <constraint firstItem="eRM-RY-ZFK" firstAttribute="top" secondItem="MOv-Lw-XWo" secondAttribute="bottom" constant="63" id="WHg-qF-cZq"/>
+                            <constraint firstItem="eRM-RY-ZFK" firstAttribute="top" secondItem="MOv-Lw-XWo" secondAttribute="bottom" constant="66" id="WHg-qF-cZq"/>
                             <constraint firstItem="MOv-Lw-XWo" firstAttribute="baseline" secondItem="ADb-kL-omc" secondAttribute="baseline" id="b5v-3f-sM5"/>
                             <constraint firstItem="b8s-Z6-vUy" firstAttribute="top" secondItem="ADb-kL-omc" secondAttribute="bottom" constant="239" id="biG-JV-d0D"/>
                             <constraint firstItem="MOv-Lw-XWo" firstAttribute="bottom" secondItem="ADb-kL-omc" secondAttribute="bottom" id="gwu-hN-7wg"/>
@@ -811,7 +797,7 @@
                             <constraint firstItem="V7o-Lb-bYk" firstAttribute="leading" secondItem="z00-TL-yjv" secondAttribute="trailing" constant="90" id="q0r-GS-QtZ"/>
                             <constraint firstItem="z00-TL-yjv" firstAttribute="baseline" secondItem="V7o-Lb-bYk" secondAttribute="baseline" id="sc6-lN-vza"/>
                             <constraint firstItem="b8s-Z6-vUy" firstAttribute="top" secondItem="OeO-9o-QfC" secondAttribute="bottom" constant="93" id="sf6-Nd-eF8"/>
-                            <constraint firstItem="eRM-RY-ZFK" firstAttribute="top" secondItem="V7o-Lb-bYk" secondAttribute="bottom" constant="45" id="xOU-hT-gQC"/>
+                            <constraint firstItem="eRM-RY-ZFK" firstAttribute="top" secondItem="V7o-Lb-bYk" secondAttribute="bottom" constant="48" id="xOU-hT-gQC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QMe-9d-Y85"/>
