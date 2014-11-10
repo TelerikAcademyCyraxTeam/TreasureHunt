@@ -120,7 +120,7 @@ static PFObject * selectedCache;
         case 1:{
             NSString *currentCacheName = [selectedCache objectForKey:@"name"];
             NSString *currentCachePlace = [selectedCache objectForKey:@"Town"];
-            NSString *currentCacheDescription = [selectedCache objectForKey:@"casheDescrition"];
+            NSString *currentCacheDescription = [selectedCache objectForKey:@"cashDescription"];
             NSString *currentCacheHint = [selectedCache objectForKey:@"hint"];
             NSString *currentCacheCreatedBy = [selectedCache objectForKey:@"createdBy"];
             NSString *currentCacheFoundBy = [selectedCache objectForKey:@"userFound"];
