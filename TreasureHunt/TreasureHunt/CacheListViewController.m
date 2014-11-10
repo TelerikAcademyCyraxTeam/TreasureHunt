@@ -102,7 +102,7 @@ static PFObject * selectedCache;
         }
         case 1:{
             NSString *currentCacheName = [selectedCache objectForKey:@"name"];
-            //NSString *currentCacheTown = [selectedCache objectForKey:@"Town"];
+            NSString *currentCachePlace = [selectedCache objectForKey:@"Town"];
             NSString *currentCacheDescription = [selectedCache objectForKey:@"casheDescrition"];
             NSString *currentCacheHint = [selectedCache objectForKey:@"hint"];
             NSString *currentCacheCreatedBy = [selectedCache objectForKey:@"createdBy"];
@@ -110,7 +110,9 @@ static PFObject * selectedCache;
             NSNumber *currentCacheIsFound = [selectedCache objectForKey:@"isFound"];
             PFGeoPoint *currentCacheLocation = [selectedCache objectForKey:@"location"];
             NSString *currentCacheId = selectedCache.objectId;
-            
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            [formatter setDateFormat:@"yyyy-MM-dd HH-mm-ss"];
+            NSString *currentCacheDateCreated = [formatter stringFromDate:selectedCache.createdAt];
             NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Cache"];
             //NSSortDescriptor *sort =
             //[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
@@ -133,6 +135,8 @@ static PFObject * selectedCache;
                     cache.isFound = currentCacheIsFound;
                     cache.latitude = [NSNumber numberWithDouble: currentCacheLocation.latitude];
                     cache.longitude = [NSNumber numberWithDouble: currentCacheLocation.longitude];
+                    cache.place = currentCachePlace;
+                    cache.dateCreated = currentCacheDateCreated;
                     
                     [self.cdHelper saveContext];
                     
@@ -142,25 +146,27 @@ static PFObject * selectedCache;
                 }
             }
             
-                //add new object to localDB
-                Cache *currentCache = [NSEntityDescription insertNewObjectForEntityForName:@"Cache" inManagedObjectContext:_cdHelper.context];
-                currentCache.name = currentCacheName;
-                currentCache.cacheDescription = currentCacheDescription;
-                currentCache.hint = currentCacheHint;
-                currentCache.userCreated = currentCacheCreatedBy;
-                if (!currentCacheFoundBy) {
-                    currentCache.userFoundIt = currentCacheFoundBy;
-                }
-                currentCache.isFound = currentCacheIsFound;
-                currentCache.latitude = [NSNumber numberWithDouble: currentCacheLocation.latitude];
-                currentCache.longitude = [NSNumber numberWithDouble: currentCacheLocation.longitude];
-                currentCache.cacheId = currentCacheId;
+            //add new object to localDB
+            Cache *currentCache = [NSEntityDescription insertNewObjectForEntityForName:@"Cache" inManagedObjectContext:_cdHelper.context];
+            currentCache.name = currentCacheName;
+            currentCache.cacheDescription = currentCacheDescription;
+            currentCache.hint = currentCacheHint;
+            currentCache.userCreated = currentCacheCreatedBy;
+            if (!currentCacheFoundBy) {
+                currentCache.userFoundIt = currentCacheFoundBy;
+            }
+            currentCache.isFound = currentCacheIsFound;
+            currentCache.latitude = [NSNumber numberWithDouble: currentCacheLocation.latitude];
+            currentCache.longitude = [NSNumber numberWithDouble: currentCacheLocation.longitude];
+            currentCache.place = currentCachePlace;
+            currentCache.dateCreated = currentCacheDateCreated;
+            currentCache.cacheId = currentCacheId;
                 
-                [_cdHelper.context insertObject:currentCache];
+            [_cdHelper.context insertObject:currentCache];
                 
-                [self.cdHelper saveContext];
+            [self.cdHelper saveContext];
                 
-                [self.view makeToast:@"Added to favourites"];
+            [self.view makeToast:@"Added to favourites"];
             break;
         }
         default:

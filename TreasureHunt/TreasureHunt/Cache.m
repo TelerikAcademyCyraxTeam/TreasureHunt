@@ -20,5 +20,7 @@
 @dynamic name;
 @dynamic userFoundIt;
 @dynamic userCreated;
+@dynamic place;
+@dynamic dateCreated;
 
 @end
