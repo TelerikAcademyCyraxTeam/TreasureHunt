@@ -8,6 +8,7 @@
 
 #import "CacheDetailsViewController.h"
 #import <Parse/Parse.h>
+#import "CacheImageViewController.h"
 
 @interface CacheDetailsViewController ()
 
@@ -15,10 +16,12 @@
 
 @implementation CacheDetailsViewController{
     UIImage *image;
+    UIStoryboard *_storyboard;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
      self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"homeBackground.png"]];
     self.name.text = [self.currentCache objectForKey:@"name"];
        BOOL flag = [self.currentCache objectForKey:@"isFound"];
@@ -33,6 +36,10 @@
     self.hint.text = [self.currentCache objectForKey:@"hint"];
     self.createdBy.text = [self.currentCache objectForKey:@"createdBy"];
     
+        // Do any additional setup after loading the view.
+}
+
+-(void) getPhoto{
     PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
@@ -41,8 +48,14 @@
                     PFFile *data =[file objectForKey:@"imageFile"];
                     [data getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
                         if (!error) {
-                            UIImage *image = [UIImage imageWithData:imageData];
-                            NSLog(@"%@",image);
+                            CacheImageViewController *cacheImageView = [_storyboard instantiateViewControllerWithIdentifier:@"image"];
+                            image = [UIImage imageWithData:imageData];
+                            cacheImageView.imageFile = image;
+                            [self presentViewController:cacheImageView animated:YES completion:nil];
+                            
+                        }
+                        else{
+                            NSLog(@"mi shte gurmi");
                         }
                     }];
                     
@@ -51,10 +64,10 @@
             }
         }
         else{
-            NSLog(@"MMMMMMMMMMMMMM");
+            NSLog(@"GRESHKAA BE");
         }
     }];
-    // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,6 +76,7 @@
 }
 
 - (IBAction)showImage:(UIButton *)sender {
+    [self getPhoto];
 }
 
 - (IBAction)loadMap:(UIButton *)sender {
