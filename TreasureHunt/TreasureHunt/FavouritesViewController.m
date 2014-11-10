@@ -126,6 +126,8 @@
             for(Cache *cache in fetchedObjects){
                 if([cache.name isEqualToString:currentCache.name]){
                     [_cdHelper.context deleteObject:cache];
+                    
+                    [self.cdHelper saveContext];
                 }
             }
             break;
