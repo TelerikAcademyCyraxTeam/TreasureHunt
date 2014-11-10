@@ -21,5 +21,7 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * userFoundIt;
 @property (nonatomic, retain) NSString * userCreated;
+@property (nonatomic, retain) NSString * place;
+@property (nonatomic, retain) NSString * dateCreated;
 
 @end

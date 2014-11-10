@@ -3,15 +3,17 @@
     <entity name="Cache" syncable="YES">
         <attribute name="cacheDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cacheId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="hint" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isFound" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="place" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userCreated" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userFoundIt" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Cache" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="Cache" positionX="-63" positionY="-18" width="128" height="210"/>
     </elements>
 </model>
