@@ -65,6 +65,8 @@
 		84F780961A0E729B00B90A0A /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F780951A0E729B00B90A0A /* NSMutableArray+SWUtilityButtons.m */; };
 		84F780D11A0FA0FE00B90A0A /* LongPressHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F780D01A0FA0FE00B90A0A /* LongPressHomeViewController.m */; };
 		84F780D41A0FBEBF00B90A0A /* AddPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F780D31A0FBEBF00B90A0A /* AddPhotoViewController.m */; };
+		84F780DA1A1034B800B90A0A /* FavouritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F780D91A1034B800B90A0A /* FavouritesViewController.m */; };
+		84F780DC1A103B8900B90A0A /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F780DB1A103B8900B90A0A /* cross.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +165,9 @@
 		84F780D31A0FBEBF00B90A0A /* AddPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPhotoViewController.m; sourceTree = "<group>"; };
 		84F780D51A10071300B90A0A /* SingleCacheMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleCacheMapViewController.h; sourceTree = "<group>"; };
 		84F780D61A10071300B90A0A /* SingleCacheMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleCacheMapViewController.m; sourceTree = "<group>"; };
+		84F780D81A1034B700B90A0A /* FavouritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavouritesViewController.h; sourceTree = "<group>"; };
+		84F780D91A1034B800B90A0A /* FavouritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouritesViewController.m; sourceTree = "<group>"; };
+		84F780DB1A103B8900B90A0A /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +342,8 @@
 				84F780D31A0FBEBF00B90A0A /* AddPhotoViewController.m */,
 				84A395E81A0FEE980071DEB0 /* SingleCacheMapViewController.h */,
 				84A395E91A0FEE980071DEB0 /* SingleCacheMapViewController.m */,
+				84F780D81A1034B700B90A0A /* FavouritesViewController.h */,
+				84F780D91A1034B800B90A0A /* FavouritesViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -363,6 +370,7 @@
 		84F7807B1A0E4AFA00B90A0A /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				84F780DB1A103B8900B90A0A /* cross.png */,
 				84F780831A0E656200B90A0A /* treasure_map_min.png */,
 				84F780811A0E63DC00B90A0A /* treasure_chest_diskette_min.png */,
 				84F780731A0E4A7E00B90A0A /* treasure-map-icon.png */,
@@ -456,6 +464,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F780DC1A103B8900B90A0A /* cross.png in Resources */,
 				84F780751A0E4A7E00B90A0A /* homeBackground.png in Resources */,
 				84F780821A0E63DC00B90A0A /* treasure_chest_diskette_min.png in Resources */,
 				84F780841A0E656200B90A0A /* treasure_map_min.png in Resources */,
@@ -504,6 +513,7 @@
 				84A7ADD21A0CE023005A5E96 /* CacheModel.xcdatamodeld in Sources */,
 				84F780911A0E6C4C00B90A0A /* SWTableViewCell.m in Sources */,
 				849D9C5C1A0A791E007CFD38 /* HomeViewController.m in Sources */,
+				84F780DA1A1034B800B90A0A /* FavouritesViewController.m in Sources */,
 				84A28A071A0E8B7E00C9DD6F /* MapViewController.m in Sources */,
 				84A7ADCD1A0CBC6B005A5E96 /* CodeDataHelper.m in Sources */,
 				84A395EA1A0FEE980071DEB0 /* SingleCacheMapViewController.m in Sources */,

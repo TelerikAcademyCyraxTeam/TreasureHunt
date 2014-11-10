@@ -12,9 +12,11 @@
 #import "NewCacheViewController.h"
 #import "MapViewController.h"
 #import "CacheListViewController.h"
+#import "Cache.h"
+#import "CodeDataHelper.h"
 
 @interface LongPressHomeViewController ()
-
+@property(nonatomic, strong) CodeDataHelper* cdHelper;
 @end
 
 @implementation LongPressHomeViewController{
@@ -73,6 +75,15 @@
     [self presentViewController:newCacheView animated:YES completion:nil];
 }
 
+-(void)listFavourites:(UIButton *)sender{
+    CacheListViewController *favourites = [_storyboard instantiateViewControllerWithIdentifier:@"favourites"];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Cache"];
+    _cdHelper = [CodeDataHelper getInstance];
+    [_cdHelper setupCoreData];
+    NSArray *fetchedObjects = [_cdHelper.context executeFetchRequest:request error:nil];
+    favourites.caches = fetchedObjects;
+    [self presentViewController:favourites animated:YES completion:nil];
+}
 
 - (IBAction)loadMap:(UIButton *)sender {
     MapViewController *newCacheView = [_storyboard instantiateViewControllerWithIdentifier:@"map"];

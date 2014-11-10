@@ -12,5 +12,6 @@
 - (IBAction)loadMap:(UIButton *)sender;
 - (IBAction)listCaches:(UIButton *)sender;
 - (IBAction)addCache:(UIButton *)sender;
+- (IBAction)listFavourites:(id)sender;
 
 @end

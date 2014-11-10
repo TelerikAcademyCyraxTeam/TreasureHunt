@@ -40,7 +40,8 @@ static PFObject * selectedCache;
     longPress.allowableMovement = 100.0f;
     [self.view addGestureRecognizer:longPress];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"homeBackground.png"]];
+   // self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"homeBackground.png"]];
+        self.tableView.backgroundColor =[UIColor colorWithPatternImage:[UIImage imageNamed:@"homeBackground.png"]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,7 +64,6 @@ static PFObject * selectedCache;
     
     [leftSideButtons sw_addUtilityButtonWithColor:[UIColor brownColor] icon:[UIImage imageNamed:@"treasure_map_min.png"]];
     [leftSideButtons sw_addUtilityButtonWithColor:[UIColor brownColor] icon:[UIImage imageNamed:@"treasure_chest_diskette_min.png"]];
-    //leftSideButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.35f] icon:[UIImage imageNamed:@"treasure_chest_diskette_min.png"]];
 
     
     cell.leftUtilityButtons = leftSideButtons;

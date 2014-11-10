@@ -11,9 +11,11 @@
 #import "CacheListViewController.h"
 #import "NewCacheViewController.h"
 #import "MapViewController.h"
+#import "Cache.h"
+#import "CodeDataHelper.h"
 
 @interface HomeViewController ()
-
+@property(nonatomic, strong) CodeDataHelper* cdHelper;
 @end
 
 @implementation HomeViewController{
@@ -56,6 +58,12 @@
             }
         }];
 
+}
+
+-(void)listFavourites:(UIButton *)sender{
+            CacheListViewController *favourites = [_storyboard instantiateViewControllerWithIdentifier:@"favourites"];
+
+    [self presentViewController:favourites animated:YES completion:nil];
 }
 
 - (IBAction)addCache:(UIButton *)sender {
