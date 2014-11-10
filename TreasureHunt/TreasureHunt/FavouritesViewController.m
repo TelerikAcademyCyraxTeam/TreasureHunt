@@ -13,7 +13,7 @@
 #import "Cache.h"
 #import "CodeDataHelper.h"
 #import "SingleCacheMapViewController.h"
-#import "CacheDetailsViewController.h"
+#import "FavoritesCacheDetailsViewController.h"
 
 @interface FavouritesViewController ()
 @property(nonatomic, strong) CodeDataHelper* cdHelper;
@@ -96,9 +96,9 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    CacheDetailsViewController *details = [_storyboard instantiateViewControllerWithIdentifier:@"details"];
+    FavoritesCacheDetailsViewController *details = [_storyboard instantiateViewControllerWithIdentifier:@"favoriteDetails"];
     Cache *selectedCache = [self.caches objectAtIndex:indexPath.row];
-  //  details.localCache = selectedCache;
+    details.currentCache = selectedCache;
     [self presentViewController:details animated:YES completion:nil];
     
 }
