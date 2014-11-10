@@ -101,8 +101,6 @@ static PFObject * selectedCache;
             break;
         }
         case 1:{
-            _cdHelper = [CodeDataHelper getInstance];
-            [_cdHelper setupCoreData];
             NSString *currentCacheName = [selectedCache objectForKey:@"name"];
             //NSString *currentCacheTown = [selectedCache objectForKey:@"Town"];
             NSString *currentCacheDescription = [selectedCache objectForKey:@"casheDescrition"];
@@ -117,6 +115,8 @@ static PFObject * selectedCache;
             //NSSortDescriptor *sort =
             //[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
             //[request setSortDescriptors:[NSArray arrayWithObject:sort]];
+            _cdHelper = [CodeDataHelper getInstance];
+            [_cdHelper setupCoreData];
             
             NSArray *fetchedObjects = [_cdHelper.context executeFetchRequest:request error:nil];
             

@@ -451,6 +451,9 @@
                                     <action selector="loadMap:" destination="iYT-gv-rGz" eventType="touchUpInside" id="och-Yy-goD"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Treasure-Hunts-Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uvb-CP-N0C">
+                                <rect key="frame" x="43" y="79" width="240" height="131"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -504,6 +507,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Treasure-Hunts-Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="sj1-As-Phn">
+                                <rect key="frame" x="56" y="64" width="240" height="133"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -794,6 +800,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Treasure-Hunts-Logo.png" width="300" height="250"/>
         <image name="loginbutton.png" width="490" height="195"/>
         <image name="treasure-map-icon.png" width="256" height="256"/>
         <image name="treasure_chest.png" width="128" height="128"/>
