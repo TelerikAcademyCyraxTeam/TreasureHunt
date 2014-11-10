@@ -69,9 +69,9 @@
     // coordinate -33.86,151.20 at zoom level 6.
     camera = [GMSCameraPosition cameraWithLatitude:_currentLocation.coordinate.latitude
                                          longitude:_currentLocation.coordinate.longitude
-                                              zoom:15];
+                                              zoom:12];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    mapView_.delegate = self;
+    //mapView_.delegate = self;
     mapView_.myLocationEnabled = YES;
     self.view = mapView_;
     
@@ -95,7 +95,7 @@
     cacheMarker.title = [selectedCache objectForKey:@"name"];
     cacheMarker.snippet = [NSString stringWithFormat:@"By %@", [selectedCache objectForKey:@"createdBy"]];
     cacheMarker.appearAnimation = kGMSMarkerAnimationPop;
-   // cacheMarker.icon = [UIImage imageNamed:@"blue_marker.png"];
+    cacheMarker.icon = [UIImage imageNamed:@"arrow.png"];
     cacheMarker.map = mapView_;
     
 }
