@@ -865,7 +865,6 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.95294123890000004" green="0.92549026010000002" blue="0.76862752440000004" alpha="1" colorSpace="deviceRGB"/>
                                             <constraints>
                                                 <constraint firstItem="2dT-4T-moS" firstAttribute="leading" secondItem="ZW9-ln-CKy" secondAttribute="leading" id="1oF-4X-YxB"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ELe-Dg-LmT" secondAttribute="bottom" constant="-5" id="Car-bx-a8X"/>
@@ -882,7 +881,7 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="ELe-Dg-LmT" secondAttribute="bottom" constant="-5" id="r2F-Wh-six"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.83603714923469385" green="0.72762827171325462" blue="0.47942313992027596" alpha="0.60999999999999999" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.83603714920000005" green="0.7276282717" blue="0.47942313990000002" alpha="0.60999999999999999" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="date" destination="2dT-4T-moS" id="qTh-VK-sW6"/>
                                             <outlet property="name" destination="ZW9-ln-CKy" id="KG1-Mn-PrP"/>

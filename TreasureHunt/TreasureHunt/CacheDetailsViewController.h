@@ -17,7 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *cacheDescription;
 @property (weak, nonatomic) IBOutlet UILabel *hint;
 @property(strong,nonatomic) PFObject *currentCache;
-@property(strong, nonatomic) Cache *localCache;
 - (IBAction)showImage:(UIButton *)sender;
 - (IBAction)loadMap:(UIButton *)sender;
 - (IBAction)getBack:(UIButton *)sender;

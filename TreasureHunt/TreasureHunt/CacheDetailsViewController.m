@@ -25,7 +25,8 @@
     [super viewDidLoad];
     _storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"homeBackground.png"]];
-    if([self.parentViewController isKindOfClass: [CacheListViewController class]]){
+    
+    
         self.name.text = [self.currentCache objectForKey:@"name"];
         BOOL flag = [self.currentCache objectForKey:@"isFound"];
         NSLog(@"%d",(int)flag);
@@ -39,11 +40,11 @@
         self.cacheDescription.text =[self.currentCache objectForKey:@"cashDescription"];
         self.hint.text = [self.currentCache objectForKey:@"hint"];
         self.createdBy.text = [self.currentCache objectForKey:@"createdBy"];
-        // [self.showPhotoButton setEnabled:YES];
+     
 
-    }
-    else{
-        self.name.text = self.localCache.name;
+    
+    
+      /* self.name.text = self.localCache.name;
         if(self.localCache.isFound){
             self.isFound.text = @"YES";
         }
@@ -54,8 +55,7 @@
         self.cacheDescription.text = self.localCache.cacheDescription;
         self.hint.text = self.localCache.hint;
         self.createdBy.text = self.localCache.userCreated;
-      //  [self.showPhotoButton setEnabled:NO];
-    }
+      //  */
     
     _swipeUp=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeleft:)];
     _swipeUp.direction = UISwipeGestureRecognizerDirectionUp;

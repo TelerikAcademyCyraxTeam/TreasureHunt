@@ -98,7 +98,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     CacheDetailsViewController *details = [_storyboard instantiateViewControllerWithIdentifier:@"details"];
     Cache *selectedCache = [self.caches objectAtIndex:indexPath.row];
-    details.localCache = selectedCache;
+  //  details.localCache = selectedCache;
     [self presentViewController:details animated:YES completion:nil];
     
 }
