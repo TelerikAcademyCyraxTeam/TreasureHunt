@@ -71,7 +71,7 @@
                                          longitude:_currentLocation.coordinate.longitude
                                               zoom:12];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    mapView_.delegate = self;
+    //mapView_.delegate = self;
     mapView_.myLocationEnabled = YES;
     self.view = mapView_;
     
