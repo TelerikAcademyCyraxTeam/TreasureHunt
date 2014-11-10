@@ -865,6 +865,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.95294123890000004" green="0.92549026010000002" blue="0.76862752440000004" alpha="1" colorSpace="deviceRGB"/>
                                             <constraints>
                                                 <constraint firstItem="2dT-4T-moS" firstAttribute="leading" secondItem="ZW9-ln-CKy" secondAttribute="leading" id="1oF-4X-YxB"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ELe-Dg-LmT" secondAttribute="bottom" constant="-5" id="Car-bx-a8X"/>

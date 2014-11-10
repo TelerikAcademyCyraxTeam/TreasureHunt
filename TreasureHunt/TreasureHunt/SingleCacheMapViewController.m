@@ -77,6 +77,7 @@
     button.frame = CGRectMake(10, 50, 100, 20);
     button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
     [button setTitle:@"<Back" forState:UIControlStateNormal];
+    [button setBackgroundColor:[UIColor lightGrayColor]];
     [button addTarget:self action:@selector(closeMap)  forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
 
